@@ -33,19 +33,6 @@ const ImageContainer = styled.div`
   justify-content: center;
 `
 
-const ProfileImage = styled.div`
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
-  background: linear-gradient(135deg, ${({ theme }) => theme.colors.primary}, ${({ theme }) => theme.colors.info});
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: ${({ theme }) => theme.colors.white};
-  font-size: ${({ theme }) => theme.fontSizes['4xl']};
-  font-weight: 700;
-`
-
 const TextContent = styled.div`
 padding: 0 ${({ theme }) => theme.spacing.md};
 text-break: keep-all;
@@ -107,9 +94,7 @@ const About: React.FC = () => {
               return <Paragraph key={i}>{parts}</Paragraph>
             })}
           </TextContent>
-          <ImageContainer>
-            {/* <ProfileImage>{aboutContent.profileImageAlt}</ProfileImage> */}
-          </ImageContainer>
+          <ImageContainer />
         </Content>
         <Highlights>
           {aboutContent.highlights.map((h, i) => (
