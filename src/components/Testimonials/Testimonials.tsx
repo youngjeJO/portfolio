@@ -3,7 +3,7 @@ import styled from 'styled-components'
 
 const TestimonialsSection = styled.section`
   padding: ${({ theme }) => theme.spacing['2xl']} ${({ theme }) => theme.spacing.md};
-  background-color: ${({ theme }) => theme.colors.light};
+  background-color: ${({ theme }) => theme.colors.gray50};
 `
 
 const Container = styled.div`
@@ -15,7 +15,7 @@ const SectionTitle = styled.h2`
   font-size: ${({ theme }) => theme.fontSizes['4xl']};
   text-align: center;
   margin-bottom: ${({ theme }) => theme.spacing.xl};
-  color: ${({ theme }) => theme.colors.dark};
+  color: ${({ theme }) => theme.colors.navy};
 `
 
 const TestimonialsGrid = styled.div`
@@ -33,13 +33,13 @@ const TestimonialCard = styled.div`
 
 const Quote = styled.div`
   font-size: ${({ theme }) => theme.fontSizes['3xl']};
-  color: ${({ theme }) => theme.colors.primary};
+  color: ${({ theme }) => theme.colors.navy};
   margin-bottom: ${({ theme }) => theme.spacing.sm};
 `
 
 const TestimonialText = styled.p`
   font-size: ${({ theme }) => theme.fontSizes.base};
-  color: ${({ theme }) => theme.colors.secondary};
+  color: ${({ theme }) => theme.colors.gray500};
   line-height: 1.8;
   margin-bottom: ${({ theme }) => theme.spacing.md};
   font-style: italic;
@@ -55,7 +55,7 @@ const AuthorAvatar = styled.div`
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  background: linear-gradient(135deg, ${({ theme }) => theme.colors.primary}, ${({ theme }) => theme.colors.info});
+  background-color: ${({ theme }) => theme.colors.navy};
   display: flex;
   align-items: center;
   justify-content: center;
@@ -70,13 +70,13 @@ const AuthorInfo = styled.div`
 
 const AuthorName = styled.div`
   font-weight: 600;
-  color: ${({ theme }) => theme.colors.dark};
+  color: ${({ theme }) => theme.colors.navy};
   margin-bottom: 2px;
 `
 
 const AuthorRole = styled.div`
   font-size: ${({ theme }) => theme.fontSizes.sm};
-  color: ${({ theme }) => theme.colors.secondary};
+  color: ${({ theme }) => theme.colors.gray500};
 `
 
 interface Testimonial {

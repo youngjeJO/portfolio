@@ -20,13 +20,13 @@ const BackButton = styled(Link)`
   align-items: center;
   gap: ${({ theme }) => theme.spacing.xs};
   margin-bottom: ${({ theme }) => theme.spacing.xl};
-  color: ${({ theme }) => theme.colors.primary};
+  color: ${({ theme }) => theme.colors.navy};
   text-decoration: none;
   font-weight: 600;
   transition: color 0.3s ease;
 
   &:hover {
-    color: ${({ theme }) => theme.colors.dark};
+    color: ${({ theme }) => theme.colors.navy};
   }
 `
 
@@ -40,7 +40,7 @@ const ProjectCard = styled.div`
 const ProjectImage = styled.div`
   width: 100%;
   height: 300px;
-  background: linear-gradient(135deg, ${({ theme }) => theme.colors.primary}, ${({ theme }) => theme.colors.secondary});
+  background: linear-gradient(135deg, ${({ theme }) => theme.colors.navy}, ${({ theme }) => theme.colors.gray500});
   display: flex;
   align-items: center;
   justify-content: center;
@@ -55,14 +55,14 @@ const ProjectContent = styled.div`
 
 const ProjectHeader = styled.div`
   margin-bottom: ${({ theme }) => theme.spacing.xl};
-  border-bottom: 2px solid ${({ theme }) => theme.colors.light};
+  border-bottom: 2px solid ${({ theme }) => theme.colors.gray50};
   padding-bottom: ${({ theme }) => theme.spacing.lg};
 `
 
 const ProjectTitle = styled.h1`
   font-size: ${({ theme }) => theme.fontSizes['4xl']};
   margin-bottom: ${({ theme }) => theme.spacing.md};
-  color: ${({ theme }) => theme.colors.dark};
+  color: ${({ theme }) => theme.colors.navy};
 `
 
 const ProjectMeta = styled.div`
@@ -74,22 +74,22 @@ const ProjectMeta = styled.div`
 
 const MetaItem = styled.div`
   font-size: ${({ theme }) => theme.fontSizes.sm};
-  color: ${({ theme }) => theme.colors.secondary};
+  color: ${({ theme }) => theme.colors.gray500};
 
   strong {
-    color: ${({ theme }) => theme.colors.dark};
+    color: ${({ theme }) => theme.colors.navy};
     margin-right: ${({ theme }) => theme.spacing.xs};
   }
 `
 
 const Role = styled.div`
   font-size: ${({ theme }) => theme.fontSizes.base};
-  color: ${({ theme }) => theme.colors.dark};
+  color: ${({ theme }) => theme.colors.navy};
   font-weight: 600;
   padding: ${({ theme }) => theme.spacing.sm};
-  background-color: ${({ theme }) => theme.colors.light};
+  background-color: ${({ theme }) => theme.colors.gray50};
   border-radius: 6px;
-  border-left: 4px solid ${({ theme }) => theme.colors.primary};
+  border-left: 4px solid ${({ theme }) => theme.colors.navy};
 `
 
 const Description = styled.div`
@@ -99,7 +99,7 @@ const Description = styled.div`
 const DescriptionTitle = styled.h2`
   font-size: ${({ theme }) => theme.fontSizes.xl};
   margin-bottom: ${({ theme }) => theme.spacing.md};
-  color: ${({ theme }) => theme.colors.dark};
+  color: ${({ theme }) => theme.colors.navy};
   display: flex;
   align-items: center;
   gap: ${({ theme }) => theme.spacing.xs};
@@ -107,7 +107,7 @@ const DescriptionTitle = styled.h2`
 
 const DescriptionText = styled.p`
   font-size: ${({ theme }) => theme.fontSizes.base};
-  color: ${({ theme }) => theme.colors.secondary};
+  color: ${({ theme }) => theme.colors.gray500};
   line-height: 1.8;
 `
 
@@ -122,7 +122,7 @@ const TechStackCategory = styled.div`
 const TechCategoryTitle = styled.h3`
   font-size: ${({ theme }) => theme.fontSizes.base};
   font-weight: 600;
-  color: ${({ theme }) => theme.colors.dark};
+  color: ${({ theme }) => theme.colors.navy};
   margin-bottom: ${({ theme }) => theme.spacing.xs};
 `
 
@@ -134,11 +134,11 @@ const TechStack = styled.div`
 
 const TechTag = styled.span`
   padding: 6px 14px;
-  background-color: ${({ theme }) => theme.colors.light};
+  background-color: ${({ theme }) => theme.colors.gray50};
   border-radius: 20px;
   font-size: ${({ theme }) => theme.fontSizes.sm};
-  color: ${({ theme }) => theme.colors.dark};
-  border: 1px solid ${({ theme }) => theme.colors.light};
+  color: ${({ theme }) => theme.colors.navy};
+  border: 1px solid ${({ theme }) => theme.colors.gray50};
 `
 
 const TasksSection = styled.div`
@@ -148,14 +148,14 @@ const TasksSection = styled.div`
 const TaskItem = styled.div`
   margin-bottom: ${({ theme }) => theme.spacing.lg};
   padding: ${({ theme }) => theme.spacing.md};
-  background-color: ${({ theme }) => theme.colors.light};
+  background-color: ${({ theme }) => theme.colors.gray50};
   border-radius: 8px;
 `
 
 const TaskTitle = styled.h3`
   font-size: ${({ theme }) => theme.fontSizes.base};
   font-weight: 600;
-  color: ${({ theme }) => theme.colors.dark};
+  color: ${({ theme }) => theme.colors.navy};
   margin-bottom: ${({ theme }) => theme.spacing.xs};
 `
 
@@ -166,7 +166,7 @@ const TaskList = styled.ul`
 
 const TaskListItem = styled.li`
   font-size: ${({ theme }) => theme.fontSizes.sm};
-  color: ${({ theme }) => theme.colors.secondary};
+  color: ${({ theme }) => theme.colors.gray500};
   line-height: 1.8;
   margin-bottom: ${({ theme }) => theme.spacing.xs};
   padding-left: ${({ theme }) => theme.spacing.md};
@@ -176,7 +176,7 @@ const TaskListItem = styled.li`
     content: '•';
     position: absolute;
     left: 0;
-    color: ${({ theme }) => theme.colors.primary};
+    color: ${({ theme }) => theme.colors.navy};
     font-weight: bold;
   }
 `
@@ -184,7 +184,7 @@ const TaskListItem = styled.li`
 const TaskResult = styled.div`
   margin-top: ${({ theme }) => theme.spacing.xs};
   font-size: ${({ theme }) => theme.fontSizes.sm};
-  color: ${({ theme }) => theme.colors.primary};
+  color: ${({ theme }) => theme.colors.navy};
   font-weight: 600;
 `
 
@@ -195,44 +195,44 @@ const ChallengesSection = styled.div`
 const ChallengeItem = styled.div`
   margin-bottom: ${({ theme }) => theme.spacing.md};
   padding: ${({ theme }) => theme.spacing.md};
-  border-left: 4px solid ${({ theme }) => theme.colors.warning};
-  background-color: ${({ theme }) => theme.colors.light};
+  border-left: 4px solid ${({ theme }) => theme.colors.navyLight};
+  background-color: ${({ theme }) => theme.colors.gray50};
   border-radius: 0 8px 8px 0;
 `
 
 const ChallengeTitle = styled.h3`
   font-size: ${({ theme }) => theme.fontSizes.base};
   font-weight: 600;
-  color: ${({ theme }) => theme.colors.dark};
+  color: ${({ theme }) => theme.colors.navy};
   margin-bottom: ${({ theme }) => theme.spacing.xs};
 `
 
 const ChallengeLabel = styled.div`
   font-size: ${({ theme }) => theme.fontSizes.sm};
   font-weight: 600;
-  color: ${({ theme }) => theme.colors.dark};
+  color: ${({ theme }) => theme.colors.navy};
   margin-top: ${({ theme }) => theme.spacing.xs};
   margin-bottom: 4px;
 `
 
 const ChallengeText = styled.div`
   font-size: ${({ theme }) => theme.fontSizes.sm};
-  color: ${({ theme }) => theme.colors.secondary};
+  color: ${({ theme }) => theme.colors.gray500};
   line-height: 1.6;
 `
 
 const Results = styled.div`
-  background: linear-gradient(135deg, ${({ theme }) => theme.colors.light}, ${({ theme }) => theme.colors.white});
+  background-color: ${({ theme }) => theme.colors.gray50};
   padding: ${({ theme }) => theme.spacing.lg};
   border-radius: 12px;
   margin-bottom: ${({ theme }) => theme.spacing.xl};
-  border: 1px solid ${({ theme }) => theme.colors.light};
+  border: 1px solid ${({ theme }) => theme.colors.gray50};
 `
 
 const ResultsTitle = styled.h2`
   font-size: ${({ theme }) => theme.fontSizes.xl};
   margin-bottom: ${({ theme }) => theme.spacing.md};
-  color: ${({ theme }) => theme.colors.dark};
+  color: ${({ theme }) => theme.colors.navy};
   display: flex;
   align-items: center;
   gap: ${({ theme }) => theme.spacing.xs};
@@ -251,7 +251,7 @@ const ResultCategory = styled.div`
 const ResultCategoryTitle = styled.h3`
   font-size: ${({ theme }) => theme.fontSizes.base};
   font-weight: 600;
-  color: ${({ theme }) => theme.colors.dark};
+  color: ${({ theme }) => theme.colors.navy};
   margin-bottom: ${({ theme }) => theme.spacing.xs};
 `
 
@@ -261,7 +261,7 @@ const ResultsList = styled.ul`
 
 const ResultItem = styled.li`
   font-size: ${({ theme }) => theme.fontSizes.sm};
-  color: ${({ theme }) => theme.colors.secondary};
+  color: ${({ theme }) => theme.colors.gray500};
   line-height: 1.8;
   margin-bottom: ${({ theme }) => theme.spacing.xs};
   padding-left: ${({ theme }) => theme.spacing.md};
@@ -271,9 +271,19 @@ const ResultItem = styled.li`
     content: '✓';
     position: absolute;
     left: 0;
-    color: ${({ theme }) => theme.colors.success};
+    color: ${({ theme }) => theme.colors.navy};
     font-weight: bold;
   }
+`
+
+const ContributionBlock = styled.div`
+  margin-top: ${({ theme }) => theme.spacing.md};
+  padding-top: ${({ theme }) => theme.spacing.md};
+  border-top: 1px solid ${({ theme }) => theme.colors.gray200};
+`
+
+const ContributionText = styled(ChallengeText)`
+  margin-top: ${({ theme }) => theme.spacing.xs};
 `
 
 const ProjectDetail: React.FC = () => {
@@ -395,10 +405,10 @@ const ProjectDetail: React.FC = () => {
                   )}
                 </ResultsGrid>
                 {project.contribution && (
-                  <div style={{ marginTop: '1rem', paddingTop: '1rem', borderTop: '1px solid #e0e0e0' }}>
+                  <ContributionBlock>
                     <ResultCategoryTitle>{projectDetailLabels.contribution}</ResultCategoryTitle>
-                    <ChallengeText style={{ marginTop: '0.5rem' }}>{project.contribution}</ChallengeText>
-                  </div>
+                    <ContributionText>{project.contribution}</ContributionText>
+                  </ContributionBlock>
                 )}
               </Results>
             )}

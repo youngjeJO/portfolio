@@ -16,12 +16,12 @@ const Container = styled.div`
 const SectionTitle = styled.h2`
   font-size: ${({ theme }) => theme.fontSizes['4xl']};
   margin-bottom: ${({ theme }) => theme.spacing.xl};
-  color: ${({ theme }) => theme.colors.dark};
+  color: ${({ theme }) => theme.colors.navy};
 `
 
 const CTAText = styled.p`
   font-size: ${({ theme }) => theme.fontSizes.xl};
-  color: ${({ theme }) => theme.colors.secondary};
+  color: ${({ theme }) => theme.colors.gray500};
   margin-bottom: ${({ theme }) => theme.spacing.xl};
   line-height: 1.6;
 `
@@ -39,7 +39,7 @@ const ContactItem = styled.a`
   align-items: center;
   gap: ${({ theme }) => theme.spacing.sm};
   padding: ${({ theme }) => theme.spacing.lg};
-  background-color: ${({ theme }) => theme.colors.light};
+  background-color: ${({ theme }) => theme.colors.gray50};
   border-radius: 12px;
   text-decoration: none;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -57,18 +57,18 @@ const ContactIcon = styled.div`
 const ContactLabel = styled.div`
   font-size: ${({ theme }) => theme.fontSizes.base};
   font-weight: 600;
-  color: ${({ theme }) => theme.colors.dark};
+  color: ${({ theme }) => theme.colors.navy};
 `
 
 const ContactValue = styled.div`
   font-size: ${({ theme }) => theme.fontSizes.sm};
-  color: ${({ theme }) => theme.colors.secondary};
+  color: ${({ theme }) => theme.colors.gray500};
   word-break: break-all;
 `
 
 const FinalMessage = styled.p`
   font-size: ${({ theme }) => theme.fontSizes.lg};
-  color: ${({ theme }) => theme.colors.secondary};
+  color: ${({ theme }) => theme.colors.gray500};
   font-style: italic;
   margin-top: ${({ theme }) => theme.spacing.xl};
 `

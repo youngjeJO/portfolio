@@ -15,7 +15,7 @@ const SectionTitle = styled.h2`
   font-size: ${({ theme }) => theme.fontSizes['4xl']};
   text-align: center;
   margin-bottom: ${({ theme }) => theme.spacing.xl};
-  color: ${({ theme }) => theme.colors.dark};
+  color: ${({ theme }) => theme.colors.navy};
 `
 
 const TimelineContainer = styled.div`
@@ -29,7 +29,7 @@ const TimelineContainer = styled.div`
     top: 0;
     bottom: 0;
     width: 2px;
-    background: linear-gradient(180deg, ${({ theme }) => theme.colors.primary}, ${({ theme }) => theme.colors.info});
+    background-color: ${({ theme }) => theme.colors.navy};
   }
 `
 
@@ -45,21 +45,21 @@ const TimelineItem = styled.div`
     width: 14px;
     height: 14px;
     border-radius: 50%;
-    background-color: ${({ theme }) => theme.colors.primary};
+    background-color: ${({ theme }) => theme.colors.navy};
     border: 3px solid ${({ theme }) => theme.colors.white};
-    box-shadow: 0 0 0 3px ${({ theme }) => theme.colors.primary};
+    box-shadow: 0 0 0 3px ${({ theme }) => theme.colors.navy};
   }
 `
 
 const TimelineYear = styled.div`
   font-size: ${({ theme }) => theme.fontSizes['2xl']};
   font-weight: 700;
-  color: ${({ theme }) => theme.colors.primary};
+  color: ${({ theme }) => theme.colors.navy};
   margin-bottom: ${({ theme }) => theme.spacing.xs};
 `
 
 const TimelineEvent = styled.div`
-  background-color: ${({ theme }) => theme.colors.light};
+  background-color: ${({ theme }) => theme.colors.gray50};
   padding: ${({ theme }) => theme.spacing.md};
   border-radius: 8px;
 `
@@ -67,12 +67,12 @@ const TimelineEvent = styled.div`
 const EventTitle = styled.h3`
   font-size: ${({ theme }) => theme.fontSizes.xl};
   margin-bottom: ${({ theme }) => theme.spacing.xs};
-  color: ${({ theme }) => theme.colors.dark};
+  color: ${({ theme }) => theme.colors.navy};
 `
 
 const EventDescription = styled.p`
   font-size: ${({ theme }) => theme.fontSizes.sm};
-  color: ${({ theme }) => theme.colors.secondary};
+  color: ${({ theme }) => theme.colors.gray500};
   line-height: 1.6;
 `
 

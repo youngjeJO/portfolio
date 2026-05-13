@@ -1,15 +1,12 @@
 export const theme = {
   colors: {
-    primary: '#4a5568',
-    secondary: '#718096',
-    success: '#48bb78',
-    danger: '#f56565',
-    warning: '#ed8936',
-    info: '#4299e1',
-    light: '#f7fafc',
-    dark: '#2d3748',
+    navy: '#0f172a',
+    navyLight: '#1e293b',
+    gray50: '#f8fafc',
+    gray100: '#f1f5f9',
+    gray200: '#e2e8f0',
+    gray500: '#64748b',
     white: '#ffffff',
-    black: '#000000',
   },
   fonts: {
     primary: '"Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif',

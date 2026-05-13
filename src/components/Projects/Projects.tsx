@@ -18,7 +18,7 @@ const SectionTitle = styled.h2`
   font-size: ${({ theme }) => theme.fontSizes['4xl']};
   text-align: center;
   margin-bottom: ${({ theme }) => theme.spacing.xl};
-  color: ${({ theme }) => theme.colors.dark};
+  color: ${({ theme }) => theme.colors.navy};
 `
 
 const ProjectsGrid = styled.div`
@@ -50,7 +50,7 @@ const ProjectCard = styled(Link)`
 const ProjectImage = styled.div`
   width: 100%;
   height: 200px;
-  background: linear-gradient(135deg, ${({ theme }) => theme.colors.primary}, ${({ theme }) => theme.colors.secondary});
+  background: linear-gradient(135deg, ${({ theme }) => theme.colors.navy}, ${({ theme }) => theme.colors.gray500});
   display: flex;
   align-items: center;
   justify-content: center;
@@ -73,20 +73,20 @@ const ProjectHeader = styled.div`
 const ProjectTitle = styled.h3`
   font-size: ${({ theme }) => theme.fontSizes.xl};
   margin-bottom: ${({ theme }) => theme.spacing.xs};
-  color: ${({ theme }) => theme.colors.dark};
+  color: ${({ theme }) => theme.colors.navy};
   font-weight: 600;
 `
 
 const Role = styled.div`
   font-size: ${({ theme }) => theme.fontSizes.sm};
-  color: ${({ theme }) => theme.colors.primary};
+  color: ${({ theme }) => theme.colors.navy};
   font-weight: 600;
   margin-bottom: ${({ theme }) => theme.spacing.md};
 `
 
 const Description = styled.p`
   font-size: ${({ theme }) => theme.fontSizes.base};
-  color: ${({ theme }) => theme.colors.secondary};
+  color: ${({ theme }) => theme.colors.gray500};
   line-height: 1.6;
   margin-bottom: ${({ theme }) => theme.spacing.md};
   flex: 1;
@@ -101,22 +101,22 @@ const TechStack = styled.div`
 
 const TechTag = styled.span`
   padding: 4px 12px;
-  background-color: ${({ theme }) => theme.colors.light};
+  background-color: ${({ theme }) => theme.colors.gray50};
   border-radius: 20px;
   font-size: ${({ theme }) => theme.fontSizes.sm};
-  color: ${({ theme }) => theme.colors.dark};
+  color: ${({ theme }) => theme.colors.navy};
 `
 
 const Highlights = styled.div`
   margin-top: auto;
   padding-top: ${({ theme }) => theme.spacing.md};
-  border-top: 1px solid ${({ theme }) => theme.colors.light};
+  border-top: 1px solid ${({ theme }) => theme.colors.gray50};
 `
 
 const HighlightsTitle = styled.h4`
   font-size: ${({ theme }) => theme.fontSizes.base};
   font-weight: 600;
-  color: ${({ theme }) => theme.colors.dark};
+  color: ${({ theme }) => theme.colors.navy};
   margin-bottom: ${({ theme }) => theme.spacing.xs};
 `
 
@@ -126,7 +126,7 @@ const HighlightsList = styled.ul`
 
 const HighlightItem = styled.li`
   font-size: ${({ theme }) => theme.fontSizes.sm};
-  color: ${({ theme }) => theme.colors.secondary};
+  color: ${({ theme }) => theme.colors.gray500};
   line-height: 1.6;
   margin-bottom: ${({ theme }) => theme.spacing.xs};
   padding-left: ${({ theme }) => theme.spacing.md};
@@ -136,7 +136,7 @@ const HighlightItem = styled.li`
     content: '→';
     position: absolute;
     left: 0;
-    color: ${({ theme }) => theme.colors.primary};
+    color: ${({ theme }) => theme.colors.navy};
     font-weight: bold;
   }
 `
@@ -145,7 +145,7 @@ const ViewMore = styled.div`
   margin-top: ${({ theme }) => theme.spacing.md};
   text-align: center;
   font-size: ${({ theme }) => theme.fontSizes.sm};
-  color: ${({ theme }) => theme.colors.primary};
+  color: ${({ theme }) => theme.colors.navy};
   font-weight: 600;
 `
 

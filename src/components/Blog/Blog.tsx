@@ -3,7 +3,7 @@ import styled from 'styled-components'
 
 const BlogSection = styled.section`
   padding: ${({ theme }) => theme.spacing['2xl']} ${({ theme }) => theme.spacing.md};
-  background-color: ${({ theme }) => theme.colors.light};
+  background-color: ${({ theme }) => theme.colors.gray50};
 `
 
 const Container = styled.div`
@@ -15,7 +15,7 @@ const SectionTitle = styled.h2`
   font-size: ${({ theme }) => theme.fontSizes['4xl']};
   text-align: center;
   margin-bottom: ${({ theme }) => theme.spacing.xl};
-  color: ${({ theme }) => theme.colors.dark};
+  color: ${({ theme }) => theme.colors.navy};
 `
 
 const BlogGrid = styled.div`
@@ -40,12 +40,12 @@ const BlogCard = styled.div`
 const BlogTitle = styled.h3`
   font-size: ${({ theme }) => theme.fontSizes.xl};
   margin-bottom: ${({ theme }) => theme.spacing.sm};
-  color: ${({ theme }) => theme.colors.dark};
+  color: ${({ theme }) => theme.colors.navy};
 `
 
 const BlogDescription = styled.p`
   font-size: ${({ theme }) => theme.fontSizes.sm};
-  color: ${({ theme }) => theme.colors.secondary};
+  color: ${({ theme }) => theme.colors.gray500};
   line-height: 1.6;
   margin-bottom: ${({ theme }) => theme.spacing.md};
 `
@@ -54,14 +54,14 @@ const BlogLink = styled.a`
   display: inline-flex;
   align-items: center;
   gap: ${({ theme }) => theme.spacing.xs};
-  color: ${({ theme }) => theme.colors.primary};
+  color: ${({ theme }) => theme.colors.navy};
   text-decoration: none;
   font-weight: 600;
   font-size: ${({ theme }) => theme.fontSizes.sm};
   transition: color 0.3s ease;
 
   &:hover {
-    color: ${({ theme }) => theme.colors.dark};
+    color: ${({ theme }) => theme.colors.navy};
   }
 `
 

@@ -4,7 +4,7 @@ import { skillsContent } from '../../content'
 
 const SkillsSection = styled.section`
   padding: ${({ theme }) => theme.spacing['2xl']} ${({ theme }) => theme.spacing.md};
-  background-color: ${({ theme }) => theme.colors.light};
+  background-color: ${({ theme }) => theme.colors.white};
 `
 
 const Container = styled.div`
@@ -16,7 +16,7 @@ const SectionTitle = styled.h2`
   font-size: ${({ theme }) => theme.fontSizes['4xl']};
   text-align: center;
   margin-bottom: ${({ theme }) => theme.spacing.xl};
-  color: ${({ theme }) => theme.colors.dark};
+  color: ${({ theme }) => theme.colors.navy};
 `
 
 const SkillsGrid = styled.div`
@@ -26,7 +26,7 @@ const SkillsGrid = styled.div`
 `
 
 const SkillCategory = styled.div`
-  background-color: ${({ theme }) => theme.colors.white};
+  background-color: ${({ theme }) => theme.colors.gray100};
   padding: ${({ theme }) => theme.spacing.lg};
   border-radius: 12px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
@@ -35,8 +35,8 @@ const SkillCategory = styled.div`
 const CategoryTitle = styled.h3`
   font-size: ${({ theme }) => theme.fontSizes.xl};
   margin-bottom: ${({ theme }) => theme.spacing.md};
-  color: ${({ theme }) => theme.colors.dark};
-  border-bottom: 2px solid ${({ theme }) => theme.colors.primary};
+  color: ${({ theme }) => theme.colors.navy};
+  border-bottom: 2px solid ${({ theme }) => theme.colors.navy};
   padding-bottom: ${({ theme }) => theme.spacing.xs};
 `
 
@@ -56,7 +56,7 @@ const SkillIcon = styled.div`
   width: 40px;
   height: 40px;
   border-radius: 8px;
-  background: linear-gradient(135deg, ${({ theme }) => theme.colors.primary}, ${({ theme }) => theme.colors.info});
+  background-color: ${({ theme }) => theme.colors.navyLight};
   display: flex;
   align-items: center;
   justify-content: center;
@@ -70,13 +70,13 @@ const SkillInfo = styled.div`
 
 const SkillName = styled.div`
   font-weight: 600;
-  color: ${({ theme }) => theme.colors.dark};
+  color: ${({ theme }) => theme.colors.navy};
   margin-bottom: 4px;
 `
 
 const SkillLevel = styled.div`
   height: 6px;
-  background-color: ${({ theme }) => theme.colors.light};
+  background-color: ${({ theme }) => theme.colors.gray50};
   border-radius: 3px;
   overflow: hidden;
   margin-top: 4px;
@@ -85,7 +85,7 @@ const SkillLevel = styled.div`
 const SkillLevelBar = styled.div<{ level: number }>`
   height: 100%;
   width: ${({ level }) => level}%;
-  background: linear-gradient(90deg, ${({ theme }) => theme.colors.primary}, ${({ theme }) => theme.colors.info});
+  background-color: ${({ theme }) => theme.colors.navyLight};
   border-radius: 3px;
   transition: width 0.3s ease;
 `

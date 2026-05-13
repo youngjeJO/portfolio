@@ -32,11 +32,11 @@ const NavContainer = styled.div`
 const Logo = styled(Link)`
   font-size: ${({ theme }) => theme.fontSizes.xl};
   font-weight: 700;
-  color: ${({ theme }) => theme.colors.dark};
+  color: ${({ theme }) => theme.colors.navy};
   text-decoration: none;
 
   &:hover {
-    color: ${({ theme }) => theme.colors.primary};
+    color: ${({ theme }) => theme.colors.navy};
   }
 `
 
@@ -51,14 +51,14 @@ const NavLinks = styled.div`
 `
 
 const NavLink = styled(Link)`
-  color: ${({ theme }) => theme.colors.dark};
+  color: ${({ theme }) => theme.colors.navy};
   text-decoration: none;
   font-weight: 500;
   transition: color 0.3s ease;
   cursor: pointer;
 
   &:hover {
-    color: ${({ theme }) => theme.colors.primary};
+    color: ${({ theme }) => theme.colors.navy};
   }
 `
 
@@ -67,7 +67,7 @@ const MobileMenuButton = styled.button`
   background: none;
   border: none;
   font-size: ${({ theme }) => theme.fontSizes['2xl']};
-  color: ${({ theme }) => theme.colors.dark};
+  color: ${({ theme }) => theme.colors.navy};
   cursor: pointer;
 
   @media (max-width: ${({ theme }) => theme.breakpoints.md}) {
