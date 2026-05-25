@@ -15,7 +15,7 @@ const SectionTitle = styled.h2`
   font-size: ${({ theme }) => theme.fontSizes['4xl']};
   text-align: center;
   margin-bottom: ${({ theme }) => theme.spacing.xl};
-  color: ${({ theme }) => theme.colors.navy};
+  color: ${({ theme }) => theme.colors.text};
 `
 
 const TimelineContainer = styled.div`
@@ -29,7 +29,7 @@ const TimelineContainer = styled.div`
     top: 0;
     bottom: 0;
     width: 2px;
-    background-color: ${({ theme }) => theme.colors.navy};
+    background-color: ${({ theme }) => theme.colors.accent};
   }
 `
 
@@ -45,34 +45,33 @@ const TimelineItem = styled.div`
     width: 14px;
     height: 14px;
     border-radius: 50%;
-    background-color: ${({ theme }) => theme.colors.navy};
+    background-color: ${({ theme }) => theme.colors.accent};
     border: 3px solid ${({ theme }) => theme.colors.white};
-    box-shadow: 0 0 0 3px ${({ theme }) => theme.colors.navy};
   }
 `
 
 const TimelineYear = styled.div`
   font-size: ${({ theme }) => theme.fontSizes['2xl']};
   font-weight: 700;
-  color: ${({ theme }) => theme.colors.navy};
+  color: ${({ theme }) => theme.colors.text};
   margin-bottom: ${({ theme }) => theme.spacing.xs};
 `
 
 const TimelineEvent = styled.div`
-  background-color: ${({ theme }) => theme.colors.gray50};
+  background-color: ${({ theme }) => theme.colors.surfaceAlt};
   padding: ${({ theme }) => theme.spacing.md};
-  border-radius: 8px;
+  border-radius: ${({ theme }) => theme.radii.base};
 `
 
 const EventTitle = styled.h3`
   font-size: ${({ theme }) => theme.fontSizes.xl};
   margin-bottom: ${({ theme }) => theme.spacing.xs};
-  color: ${({ theme }) => theme.colors.navy};
+  color: ${({ theme }) => theme.colors.text};
 `
 
 const EventDescription = styled.p`
   font-size: ${({ theme }) => theme.fontSizes.sm};
-  color: ${({ theme }) => theme.colors.gray500};
+  color: ${({ theme }) => theme.colors.textMuted};
   line-height: 1.6;
 `
 
@@ -122,4 +121,3 @@ const Timeline: React.FC = () => {
 }
 
 export default Timeline
-

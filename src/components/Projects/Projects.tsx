@@ -18,7 +18,7 @@ const SectionTitle = styled.h2`
   font-size: ${({ theme }) => theme.fontSizes['4xl']};
   text-align: center;
   margin-bottom: ${({ theme }) => theme.spacing.xl};
-  color: ${({ theme }) => theme.colors.navy};
+  color: ${({ theme }) => theme.colors.text};
 `
 
 const ProjectsGrid = styled.div`
@@ -32,25 +32,25 @@ const ProjectsGrid = styled.div`
 `
 
 const ProjectCard = styled(Link)`
-  background-color: ${({ theme }) => theme.colors.white};
-  border-radius: 12px;
+  background-color: ${({ theme }) => theme.colors.surface};
+  border-radius: ${({ theme }) => theme.radii.base};
   overflow: hidden;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid ${({ theme }) => theme.colors.border};
+  transition: transform 0.3s ease, border-color 0.3s ease;
   text-decoration: none;
   display: flex;
   flex-direction: column;
 
   &:hover {
     transform: translateY(-8px);
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    border-color: ${({ theme }) => theme.colors.accent};
   }
 `
 
 const ProjectImage = styled.div`
   width: 100%;
-  height: 200px;
-  background: linear-gradient(135deg, ${({ theme }) => theme.colors.navy}, ${({ theme }) => theme.colors.gray500});
+  height: 20px;
+  background: ${({ theme }) => theme.colors.accent};
   display: flex;
   align-items: center;
   justify-content: center;
@@ -73,20 +73,20 @@ const ProjectHeader = styled.div`
 const ProjectTitle = styled.h3`
   font-size: ${({ theme }) => theme.fontSizes.xl};
   margin-bottom: ${({ theme }) => theme.spacing.xs};
-  color: ${({ theme }) => theme.colors.navy};
+  color: ${({ theme }) => theme.colors.text};
   font-weight: 600;
 `
 
 const Role = styled.div`
   font-size: ${({ theme }) => theme.fontSizes.sm};
-  color: ${({ theme }) => theme.colors.navy};
+  color: ${({ theme }) => theme.colors.accent};
   font-weight: 600;
   margin-bottom: ${({ theme }) => theme.spacing.md};
 `
 
 const Description = styled.p`
   font-size: ${({ theme }) => theme.fontSizes.base};
-  color: ${({ theme }) => theme.colors.gray500};
+  color: ${({ theme }) => theme.colors.textMuted};
   line-height: 1.6;
   margin-bottom: ${({ theme }) => theme.spacing.md};
   flex: 1;
@@ -101,22 +101,23 @@ const TechStack = styled.div`
 
 const TechTag = styled.span`
   padding: 4px 12px;
-  background-color: ${({ theme }) => theme.colors.gray50};
-  border-radius: 20px;
+  background-color: ${({ theme }) => theme.colors.surfaceAlt};
+  border: 1px solid ${({ theme }) => theme.colors.border};
+  border-radius: ${({ theme }) => theme.radii.full};
   font-size: ${({ theme }) => theme.fontSizes.sm};
-  color: ${({ theme }) => theme.colors.navy};
+  color: ${({ theme }) => theme.colors.text};
 `
 
 const Highlights = styled.div`
   margin-top: auto;
   padding-top: ${({ theme }) => theme.spacing.md};
-  border-top: 1px solid ${({ theme }) => theme.colors.gray50};
+  border-top: 1px solid ${({ theme }) => theme.colors.border};
 `
 
 const HighlightsTitle = styled.h4`
   font-size: ${({ theme }) => theme.fontSizes.base};
   font-weight: 600;
-  color: ${({ theme }) => theme.colors.navy};
+  color: ${({ theme }) => theme.colors.text};
   margin-bottom: ${({ theme }) => theme.spacing.xs};
 `
 
@@ -126,7 +127,7 @@ const HighlightsList = styled.ul`
 
 const HighlightItem = styled.li`
   font-size: ${({ theme }) => theme.fontSizes.sm};
-  color: ${({ theme }) => theme.colors.gray500};
+  color: ${({ theme }) => theme.colors.textMuted};
   line-height: 1.6;
   margin-bottom: ${({ theme }) => theme.spacing.xs};
   padding-left: ${({ theme }) => theme.spacing.md};
@@ -136,7 +137,7 @@ const HighlightItem = styled.li`
     content: '→';
     position: absolute;
     left: 0;
-    color: ${({ theme }) => theme.colors.navy};
+    color: ${({ theme }) => theme.colors.accent};
     font-weight: bold;
   }
 `
@@ -145,7 +146,7 @@ const ViewMore = styled.div`
   margin-top: ${({ theme }) => theme.spacing.md};
   text-align: center;
   font-size: ${({ theme }) => theme.fontSizes.sm};
-  color: ${({ theme }) => theme.colors.navy};
+  color: ${({ theme }) => theme.colors.accent};
   font-weight: 600;
 `
 
@@ -157,7 +158,7 @@ const Projects: React.FC = () => {
         <ProjectsGrid>
           {projectsSummary.map((project) => (
             <ProjectCard key={project.id} to={`/project/${project.id}`}>
-              <ProjectImage>{project.title}</ProjectImage>
+              <ProjectImage></ProjectImage>
               <ProjectContent>
                 <ProjectHeader>
                   <ProjectTitle>{project.title}</ProjectTitle>

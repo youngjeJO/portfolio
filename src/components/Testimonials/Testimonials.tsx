@@ -3,7 +3,7 @@ import styled from 'styled-components'
 
 const TestimonialsSection = styled.section`
   padding: ${({ theme }) => theme.spacing['2xl']} ${({ theme }) => theme.spacing.md};
-  background-color: ${({ theme }) => theme.colors.gray50};
+  background-color: ${({ theme }) => theme.colors.surfaceAlt};
 `
 
 const Container = styled.div`
@@ -15,7 +15,7 @@ const SectionTitle = styled.h2`
   font-size: ${({ theme }) => theme.fontSizes['4xl']};
   text-align: center;
   margin-bottom: ${({ theme }) => theme.spacing.xl};
-  color: ${({ theme }) => theme.colors.navy};
+  color: ${({ theme }) => theme.colors.text};
 `
 
 const TestimonialsGrid = styled.div`
@@ -25,21 +25,21 @@ const TestimonialsGrid = styled.div`
 `
 
 const TestimonialCard = styled.div`
-  background-color: ${({ theme }) => theme.colors.white};
+  background-color: ${({ theme }) => theme.colors.surface};
   padding: ${({ theme }) => theme.spacing.lg};
-  border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border-radius: ${({ theme }) => theme.radii.base};
+  border: 1px solid ${({ theme }) => theme.colors.border};
 `
 
 const Quote = styled.div`
   font-size: ${({ theme }) => theme.fontSizes['3xl']};
-  color: ${({ theme }) => theme.colors.navy};
+  color: ${({ theme }) => theme.colors.accent};
   margin-bottom: ${({ theme }) => theme.spacing.sm};
 `
 
 const TestimonialText = styled.p`
   font-size: ${({ theme }) => theme.fontSizes.base};
-  color: ${({ theme }) => theme.colors.gray500};
+  color: ${({ theme }) => theme.colors.textMuted};
   line-height: 1.8;
   margin-bottom: ${({ theme }) => theme.spacing.md};
   font-style: italic;
@@ -55,7 +55,7 @@ const AuthorAvatar = styled.div`
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  background-color: ${({ theme }) => theme.colors.navy};
+  background-color: ${({ theme }) => theme.colors.accent};
   display: flex;
   align-items: center;
   justify-content: center;
@@ -70,13 +70,13 @@ const AuthorInfo = styled.div`
 
 const AuthorName = styled.div`
   font-weight: 600;
-  color: ${({ theme }) => theme.colors.navy};
+  color: ${({ theme }) => theme.colors.text};
   margin-bottom: 2px;
 `
 
 const AuthorRole = styled.div`
   font-size: ${({ theme }) => theme.fontSizes.sm};
-  color: ${({ theme }) => theme.colors.gray500};
+  color: ${({ theme }) => theme.colors.textMuted};
 `
 
 interface Testimonial {
@@ -131,4 +131,3 @@ const Testimonials: React.FC = () => {
 }
 
 export default Testimonials
-

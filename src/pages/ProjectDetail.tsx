@@ -20,27 +20,27 @@ const BackButton = styled(Link)`
   align-items: center;
   gap: ${({ theme }) => theme.spacing.xs};
   margin-bottom: ${({ theme }) => theme.spacing.xl};
-  color: ${({ theme }) => theme.colors.navy};
+  color: ${({ theme }) => theme.colors.text};
   text-decoration: none;
   font-weight: 600;
   transition: color 0.3s ease;
 
   &:hover {
-    color: ${({ theme }) => theme.colors.navy};
+    color: ${({ theme }) => theme.colors.accent};
   }
 `
 
 const ProjectCard = styled.div`
-  background-color: ${({ theme }) => theme.colors.white};
-  border-radius: 12px;
+  background-color: ${({ theme }) => theme.colors.surface};
+  border-radius: ${({ theme }) => theme.radii.base};
   overflow: hidden;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border: 1px solid ${({ theme }) => theme.colors.border};
 `
 
 const ProjectImage = styled.div`
   width: 100%;
   height: 300px;
-  background: linear-gradient(135deg, ${({ theme }) => theme.colors.navy}, ${({ theme }) => theme.colors.gray500});
+  background: linear-gradient(135deg, ${({ theme }) => theme.colors.accent}, ${({ theme }) => theme.colors.text});
   display: flex;
   align-items: center;
   justify-content: center;
@@ -55,14 +55,14 @@ const ProjectContent = styled.div`
 
 const ProjectHeader = styled.div`
   margin-bottom: ${({ theme }) => theme.spacing.xl};
-  border-bottom: 2px solid ${({ theme }) => theme.colors.gray50};
+  border-bottom: 2px solid ${({ theme }) => theme.colors.border};
   padding-bottom: ${({ theme }) => theme.spacing.lg};
 `
 
 const ProjectTitle = styled.h1`
   font-size: ${({ theme }) => theme.fontSizes['4xl']};
   margin-bottom: ${({ theme }) => theme.spacing.md};
-  color: ${({ theme }) => theme.colors.navy};
+  color: ${({ theme }) => theme.colors.text};
 `
 
 const ProjectMeta = styled.div`
@@ -74,22 +74,22 @@ const ProjectMeta = styled.div`
 
 const MetaItem = styled.div`
   font-size: ${({ theme }) => theme.fontSizes.sm};
-  color: ${({ theme }) => theme.colors.gray500};
+  color: ${({ theme }) => theme.colors.textMuted};
 
   strong {
-    color: ${({ theme }) => theme.colors.navy};
+    color: ${({ theme }) => theme.colors.text};
     margin-right: ${({ theme }) => theme.spacing.xs};
   }
 `
 
 const Role = styled.div`
   font-size: ${({ theme }) => theme.fontSizes.base};
-  color: ${({ theme }) => theme.colors.navy};
+  color: ${({ theme }) => theme.colors.text};
   font-weight: 600;
   padding: ${({ theme }) => theme.spacing.sm};
-  background-color: ${({ theme }) => theme.colors.gray50};
-  border-radius: 6px;
-  border-left: 4px solid ${({ theme }) => theme.colors.navy};
+  background-color: ${({ theme }) => theme.colors.surfaceAlt};
+  border-radius: ${({ theme }) => theme.radii.base};
+  border-left: 4px solid ${({ theme }) => theme.colors.accent};
 `
 
 const Description = styled.div`
@@ -99,7 +99,7 @@ const Description = styled.div`
 const DescriptionTitle = styled.h2`
   font-size: ${({ theme }) => theme.fontSizes.xl};
   margin-bottom: ${({ theme }) => theme.spacing.md};
-  color: ${({ theme }) => theme.colors.navy};
+  color: ${({ theme }) => theme.colors.text};
   display: flex;
   align-items: center;
   gap: ${({ theme }) => theme.spacing.xs};
@@ -107,7 +107,7 @@ const DescriptionTitle = styled.h2`
 
 const DescriptionText = styled.p`
   font-size: ${({ theme }) => theme.fontSizes.base};
-  color: ${({ theme }) => theme.colors.gray500};
+  color: ${({ theme }) => theme.colors.textMuted};
   line-height: 1.8;
 `
 
@@ -122,7 +122,7 @@ const TechStackCategory = styled.div`
 const TechCategoryTitle = styled.h3`
   font-size: ${({ theme }) => theme.fontSizes.base};
   font-weight: 600;
-  color: ${({ theme }) => theme.colors.navy};
+  color: ${({ theme }) => theme.colors.text};
   margin-bottom: ${({ theme }) => theme.spacing.xs};
 `
 
@@ -134,11 +134,11 @@ const TechStack = styled.div`
 
 const TechTag = styled.span`
   padding: 6px 14px;
-  background-color: ${({ theme }) => theme.colors.gray50};
-  border-radius: 20px;
+  background-color: ${({ theme }) => theme.colors.surfaceAlt};
+  border-radius: ${({ theme }) => theme.radii.full};
   font-size: ${({ theme }) => theme.fontSizes.sm};
-  color: ${({ theme }) => theme.colors.navy};
-  border: 1px solid ${({ theme }) => theme.colors.gray50};
+  color: ${({ theme }) => theme.colors.text};
+  border: 1px solid ${({ theme }) => theme.colors.border};
 `
 
 const TasksSection = styled.div`
@@ -148,14 +148,14 @@ const TasksSection = styled.div`
 const TaskItem = styled.div`
   margin-bottom: ${({ theme }) => theme.spacing.lg};
   padding: ${({ theme }) => theme.spacing.md};
-  background-color: ${({ theme }) => theme.colors.gray50};
-  border-radius: 8px;
+  background-color: ${({ theme }) => theme.colors.surfaceAlt};
+  border-radius: ${({ theme }) => theme.radii.base};
 `
 
 const TaskTitle = styled.h3`
   font-size: ${({ theme }) => theme.fontSizes.base};
   font-weight: 600;
-  color: ${({ theme }) => theme.colors.navy};
+  color: ${({ theme }) => theme.colors.text};
   margin-bottom: ${({ theme }) => theme.spacing.xs};
 `
 
@@ -166,7 +166,7 @@ const TaskList = styled.ul`
 
 const TaskListItem = styled.li`
   font-size: ${({ theme }) => theme.fontSizes.sm};
-  color: ${({ theme }) => theme.colors.gray500};
+  color: ${({ theme }) => theme.colors.textMuted};
   line-height: 1.8;
   margin-bottom: ${({ theme }) => theme.spacing.xs};
   padding-left: ${({ theme }) => theme.spacing.md};
@@ -176,7 +176,7 @@ const TaskListItem = styled.li`
     content: '•';
     position: absolute;
     left: 0;
-    color: ${({ theme }) => theme.colors.navy};
+    color: ${({ theme }) => theme.colors.accent};
     font-weight: bold;
   }
 `
@@ -184,7 +184,7 @@ const TaskListItem = styled.li`
 const TaskResult = styled.div`
   margin-top: ${({ theme }) => theme.spacing.xs};
   font-size: ${({ theme }) => theme.fontSizes.sm};
-  color: ${({ theme }) => theme.colors.navy};
+  color: ${({ theme }) => theme.colors.accent};
   font-weight: 600;
 `
 
@@ -195,44 +195,44 @@ const ChallengesSection = styled.div`
 const ChallengeItem = styled.div`
   margin-bottom: ${({ theme }) => theme.spacing.md};
   padding: ${({ theme }) => theme.spacing.md};
-  border-left: 4px solid ${({ theme }) => theme.colors.navyLight};
-  background-color: ${({ theme }) => theme.colors.gray50};
-  border-radius: 0 8px 8px 0;
+  border-left: 4px solid ${({ theme }) => theme.colors.accent};
+  background-color: ${({ theme }) => theme.colors.surfaceAlt};
+  border-radius: 0 ${({ theme }) => theme.radii.base} ${({ theme }) => theme.radii.base} 0;
 `
 
 const ChallengeTitle = styled.h3`
   font-size: ${({ theme }) => theme.fontSizes.base};
   font-weight: 600;
-  color: ${({ theme }) => theme.colors.navy};
+  color: ${({ theme }) => theme.colors.text};
   margin-bottom: ${({ theme }) => theme.spacing.xs};
 `
 
 const ChallengeLabel = styled.div`
   font-size: ${({ theme }) => theme.fontSizes.sm};
   font-weight: 600;
-  color: ${({ theme }) => theme.colors.navy};
+  color: ${({ theme }) => theme.colors.accent};
   margin-top: ${({ theme }) => theme.spacing.xs};
   margin-bottom: 4px;
 `
 
 const ChallengeText = styled.div`
   font-size: ${({ theme }) => theme.fontSizes.sm};
-  color: ${({ theme }) => theme.colors.gray500};
+  color: ${({ theme }) => theme.colors.textMuted};
   line-height: 1.6;
 `
 
 const Results = styled.div`
-  background-color: ${({ theme }) => theme.colors.gray50};
+  background-color: ${({ theme }) => theme.colors.surfaceAlt};
   padding: ${({ theme }) => theme.spacing.lg};
-  border-radius: 12px;
+  border-radius: ${({ theme }) => theme.radii.base};
   margin-bottom: ${({ theme }) => theme.spacing.xl};
-  border: 1px solid ${({ theme }) => theme.colors.gray50};
+  border: 1px solid ${({ theme }) => theme.colors.border};
 `
 
 const ResultsTitle = styled.h2`
   font-size: ${({ theme }) => theme.fontSizes.xl};
   margin-bottom: ${({ theme }) => theme.spacing.md};
-  color: ${({ theme }) => theme.colors.navy};
+  color: ${({ theme }) => theme.colors.text};
   display: flex;
   align-items: center;
   gap: ${({ theme }) => theme.spacing.xs};
@@ -251,7 +251,7 @@ const ResultCategory = styled.div`
 const ResultCategoryTitle = styled.h3`
   font-size: ${({ theme }) => theme.fontSizes.base};
   font-weight: 600;
-  color: ${({ theme }) => theme.colors.navy};
+  color: ${({ theme }) => theme.colors.text};
   margin-bottom: ${({ theme }) => theme.spacing.xs};
 `
 
@@ -261,7 +261,7 @@ const ResultsList = styled.ul`
 
 const ResultItem = styled.li`
   font-size: ${({ theme }) => theme.fontSizes.sm};
-  color: ${({ theme }) => theme.colors.gray500};
+  color: ${({ theme }) => theme.colors.textMuted};
   line-height: 1.8;
   margin-bottom: ${({ theme }) => theme.spacing.xs};
   padding-left: ${({ theme }) => theme.spacing.md};
@@ -271,7 +271,7 @@ const ResultItem = styled.li`
     content: '✓';
     position: absolute;
     left: 0;
-    color: ${({ theme }) => theme.colors.navy};
+    color: ${({ theme }) => theme.colors.accent};
     font-weight: bold;
   }
 `
@@ -279,7 +279,7 @@ const ResultItem = styled.li`
 const ContributionBlock = styled.div`
   margin-top: ${({ theme }) => theme.spacing.md};
   padding-top: ${({ theme }) => theme.spacing.md};
-  border-top: 1px solid ${({ theme }) => theme.colors.gray200};
+  border-top: 1px solid ${({ theme }) => theme.colors.border};
 `
 
 const ContributionText = styled(ChallengeText)`

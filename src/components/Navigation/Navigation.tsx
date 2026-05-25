@@ -14,8 +14,8 @@ const Nav = styled.nav<{ isScrolled: boolean }>`
   display: flex;
   align-items: center;
   background-color: ${({ isScrolled, theme }) => (isScrolled ? theme.colors.white : 'transparent')};
-  box-shadow: ${({ isScrolled }) => (isScrolled ? '0 2px 8px rgba(0, 0, 0, 0.1)' : 'none')};
-  transition: all 0.3s ease;
+  border-bottom: 1px solid ${({ isScrolled, theme }) => (isScrolled ? theme.colors.border : 'transparent')};
+  transition: background-color 0.3s ease, border-color 0.3s ease;
   z-index: 1000;
 `
 
@@ -32,11 +32,11 @@ const NavContainer = styled.div`
 const Logo = styled(Link)`
   font-size: ${({ theme }) => theme.fontSizes.xl};
   font-weight: 700;
-  color: ${({ theme }) => theme.colors.navy};
+  color: ${({ theme }) => theme.colors.text};
   text-decoration: none;
 
   &:hover {
-    color: ${({ theme }) => theme.colors.navy};
+    color: ${({ theme }) => theme.colors.accent};
   }
 `
 
@@ -51,14 +51,14 @@ const NavLinks = styled.div`
 `
 
 const NavLink = styled(Link)`
-  color: ${({ theme }) => theme.colors.navy};
+  color: ${({ theme }) => theme.colors.text};
   text-decoration: none;
   font-weight: 500;
   transition: color 0.3s ease;
   cursor: pointer;
 
   &:hover {
-    color: ${({ theme }) => theme.colors.navy};
+    color: ${({ theme }) => theme.colors.accent};
   }
 `
 
@@ -67,7 +67,7 @@ const MobileMenuButton = styled.button`
   background: none;
   border: none;
   font-size: ${({ theme }) => theme.fontSizes['2xl']};
-  color: ${({ theme }) => theme.colors.navy};
+  color: ${({ theme }) => theme.colors.text};
   cursor: pointer;
 
   @media (max-width: ${({ theme }) => theme.breakpoints.md}) {
@@ -85,7 +85,7 @@ const MobileMenu = styled.div<{ isOpen: boolean }>`
   right: 0;
   background-color: ${({ theme }) => theme.colors.white};
   padding: ${({ theme }) => theme.spacing.lg};
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid ${({ theme }) => theme.colors.border};
 
   @media (min-width: ${({ theme }) => theme.breakpoints.md}) {
     display: none;

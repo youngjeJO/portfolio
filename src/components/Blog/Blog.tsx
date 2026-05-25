@@ -3,7 +3,7 @@ import styled from 'styled-components'
 
 const BlogSection = styled.section`
   padding: ${({ theme }) => theme.spacing['2xl']} ${({ theme }) => theme.spacing.md};
-  background-color: ${({ theme }) => theme.colors.gray50};
+  background-color: ${({ theme }) => theme.colors.surfaceAlt};
 `
 
 const Container = styled.div`
@@ -15,7 +15,7 @@ const SectionTitle = styled.h2`
   font-size: ${({ theme }) => theme.fontSizes['4xl']};
   text-align: center;
   margin-bottom: ${({ theme }) => theme.spacing.xl};
-  color: ${({ theme }) => theme.colors.navy};
+  color: ${({ theme }) => theme.colors.text};
 `
 
 const BlogGrid = styled.div`
@@ -25,27 +25,27 @@ const BlogGrid = styled.div`
 `
 
 const BlogCard = styled.div`
-  background-color: ${({ theme }) => theme.colors.white};
+  background-color: ${({ theme }) => theme.colors.surface};
   padding: ${({ theme }) => theme.spacing.lg};
-  border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: ${({ theme }) => theme.radii.base};
+  border: 1px solid ${({ theme }) => theme.colors.border};
+  transition: transform 0.3s ease, border-color 0.3s ease;
 
   &:hover {
     transform: translateY(-4px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    border-color: ${({ theme }) => theme.colors.accent};
   }
 `
 
 const BlogTitle = styled.h3`
   font-size: ${({ theme }) => theme.fontSizes.xl};
   margin-bottom: ${({ theme }) => theme.spacing.sm};
-  color: ${({ theme }) => theme.colors.navy};
+  color: ${({ theme }) => theme.colors.text};
 `
 
 const BlogDescription = styled.p`
   font-size: ${({ theme }) => theme.fontSizes.sm};
-  color: ${({ theme }) => theme.colors.gray500};
+  color: ${({ theme }) => theme.colors.textMuted};
   line-height: 1.6;
   margin-bottom: ${({ theme }) => theme.spacing.md};
 `
@@ -54,14 +54,14 @@ const BlogLink = styled.a`
   display: inline-flex;
   align-items: center;
   gap: ${({ theme }) => theme.spacing.xs};
-  color: ${({ theme }) => theme.colors.navy};
+  color: ${({ theme }) => theme.colors.accent};
   text-decoration: none;
   font-weight: 600;
   font-size: ${({ theme }) => theme.fontSizes.sm};
   transition: color 0.3s ease;
 
   &:hover {
-    color: ${({ theme }) => theme.colors.navy};
+    color: ${({ theme }) => theme.colors.accentHover};
   }
 `
 
@@ -111,4 +111,3 @@ const Blog: React.FC = () => {
 }
 
 export default Blog
-

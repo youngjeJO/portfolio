@@ -16,7 +16,7 @@ export const GlobalStyle = createGlobalStyle`
   body {
     font-family: ${({ theme }) => theme.fonts.primary};
     line-height: 1.6;
-    color: ${({ theme }) => theme.colors.navy};
+    color: ${({ theme }) => theme.colors.text};
     background-color: ${({ theme }) => theme.colors.white};
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;

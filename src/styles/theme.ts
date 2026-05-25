@@ -1,11 +1,12 @@
 export const theme = {
   colors: {
-    navy: '#0f172a',
-    navyLight: '#1e293b',
-    gray50: '#f8fafc',
-    gray100: '#f1f5f9',
-    gray200: '#e2e8f0',
-    gray500: '#64748b',
+    accent: '#0094ff',
+    accentHover: '#0078d4',
+    text: '#444950',
+    textMuted: '#6b7280',
+    border: '#e5e7eb',
+    surface: '#ffffff',
+    surfaceAlt: '#f8fafc',
     white: '#ffffff',
   },
   fonts: {
@@ -31,6 +32,10 @@ export const theme = {
     xl: '2rem',
     '2xl': '3rem',
   },
+  radii: {
+    base: '10px',
+    full: '9999px',
+  },
   breakpoints: {
     sm: '640px',
     md: '768px',
@@ -40,4 +45,3 @@ export const theme = {
 } as const
 
 export type Theme = typeof theme
-

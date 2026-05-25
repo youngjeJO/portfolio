@@ -16,14 +16,14 @@ const Container = styled.div`
 const Greeting = styled.div`
   font-size: ${({ theme }) => theme.fontSizes['2xl']};
   margin-bottom: ${({ theme }) => theme.spacing.md};
-  color: ${({ theme }) => theme.colors.gray500};
+  color: ${({ theme }) => theme.colors.textMuted};
 `
 
 const Name = styled.h1`
   font-size: ${({ theme }) => theme.fontSizes['5xl']};
   font-weight: 700;
   margin-bottom: ${({ theme }) => theme.spacing.md};
-  color: ${({ theme }) => theme.colors.navy};
+  color: ${({ theme }) => theme.colors.text};
   line-height: 1.2;
 
   @media (max-width: ${({ theme }) => theme.breakpoints.md}) {
@@ -33,7 +33,7 @@ const Name = styled.h1`
 
 const Tagline = styled.p`
   font-size: ${({ theme }) => theme.fontSizes.xl};
-  color: ${({ theme }) => theme.colors.gray500};
+  color: ${({ theme }) => theme.colors.textMuted};
   margin-bottom: ${({ theme }) => theme.spacing.xl};
   line-height: 1.6;
 `
@@ -48,25 +48,25 @@ const ButtonGroup = styled.div`
 const Button = styled.a`
   display: inline-block;
   padding: ${({ theme }) => theme.spacing.sm} ${({ theme }) => theme.spacing.lg};
-  background-color: ${({ theme }) => theme.colors.navy};
+  background-color: ${({ theme }) => theme.colors.accent};
   color: ${({ theme }) => theme.colors.white};
-  border-radius: 8px;
+  border-radius: ${({ theme }) => theme.radii.base};
   font-weight: 600;
   transition: all 0.3s ease;
   text-decoration: none;
 
   &:hover {
-    background-color: ${({ theme }) => theme.colors.navy};
+    background-color: ${({ theme }) => theme.colors.accentHover};
     transform: translateY(-2px);
   }
 
   &:nth-child(2) {
     background-color: transparent;
-    border: 2px solid ${({ theme }) => theme.colors.navy};
-    color: ${({ theme }) => theme.colors.navy};
+    border: 2px solid ${({ theme }) => theme.colors.accent};
+    color: ${({ theme }) => theme.colors.accent};
 
     &:hover {
-      background-color: ${({ theme }) => theme.colors.navy};
+      background-color: ${({ theme }) => theme.colors.accent};
       color: ${({ theme }) => theme.colors.white};
     }
   }
@@ -82,7 +82,7 @@ const SectionTitle = styled.h2`
   font-size: ${({ theme }) => theme.fontSizes['4xl']};
   text-align: center;
   margin-bottom: ${({ theme }) => theme.spacing.xl};
-  color: ${({ theme }) => theme.colors.navy};
+  color: ${({ theme }) => theme.colors.text};
 `
 
 const Content = styled.div`
@@ -97,7 +97,7 @@ const TextContent = styled.div`
 const Paragraph = styled.p`
   font-size: ${({ theme }) => theme.fontSizes.base};
   line-height: 1.8;
-  color: ${({ theme }) => theme.colors.gray500};
+  color: ${({ theme }) => theme.colors.textMuted};
   margin-bottom: ${({ theme }) => theme.spacing.md};
 
   &:last-child {
@@ -114,20 +114,20 @@ const Highlights = styled.div`
 
 const HighlightCard = styled.div`
   padding: ${({ theme }) => theme.spacing.md};
-  background-color: ${({ theme }) => theme.colors.gray50};
-  border-radius: 8px;
-  border-left: 4px solid ${({ theme }) => theme.colors.navy};
+  background-color: ${({ theme }) => theme.colors.surfaceAlt};
+  border-radius: ${({ theme }) => theme.radii.base};
+  border-left: 4px solid ${({ theme }) => theme.colors.accent};
 `
 
 const HighlightTitle = styled.h3`
   font-size: ${({ theme }) => theme.fontSizes.lg};
   margin-bottom: ${({ theme }) => theme.spacing.xs};
-  color: ${({ theme }) => theme.colors.navy};
+  color: ${({ theme }) => theme.colors.text};
 `
 
 const HighlightText = styled.p`
   font-size: ${({ theme }) => theme.fontSizes.sm};
-  color: ${({ theme }) => theme.colors.gray500};
+  color: ${({ theme }) => theme.colors.textMuted};
   line-height: 1.6;
 `
 

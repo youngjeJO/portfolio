@@ -16,12 +16,12 @@ const Container = styled.div`
 const SectionTitle = styled.h2`
   font-size: ${({ theme }) => theme.fontSizes['4xl']};
   margin-bottom: ${({ theme }) => theme.spacing.xl};
-  color: ${({ theme }) => theme.colors.navy};
+  color: ${({ theme }) => theme.colors.text};
 `
 
 const CTAText = styled.p`
   font-size: ${({ theme }) => theme.fontSizes.xl};
-  color: ${({ theme }) => theme.colors.gray500};
+  color: ${({ theme }) => theme.colors.textMuted};
   margin-bottom: ${({ theme }) => theme.spacing.xl};
   line-height: 1.6;
 `
@@ -39,14 +39,15 @@ const ContactItem = styled.a`
   align-items: center;
   gap: ${({ theme }) => theme.spacing.sm};
   padding: ${({ theme }) => theme.spacing.lg};
-  background-color: ${({ theme }) => theme.colors.gray50};
-  border-radius: 12px;
+  background-color: ${({ theme }) => theme.colors.surface};
+  border: 1px solid ${({ theme }) => theme.colors.border};
+  border-radius: ${({ theme }) => theme.radii.base};
   text-decoration: none;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.3s ease, border-color 0.3s ease;
 
   &:hover {
     transform: translateY(-4px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-color: ${({ theme }) => theme.colors.accent};
   }
 `
 
@@ -57,18 +58,18 @@ const ContactIcon = styled.div`
 const ContactLabel = styled.div`
   font-size: ${({ theme }) => theme.fontSizes.base};
   font-weight: 600;
-  color: ${({ theme }) => theme.colors.navy};
+  color: ${({ theme }) => theme.colors.text};
 `
 
 const ContactValue = styled.div`
   font-size: ${({ theme }) => theme.fontSizes.sm};
-  color: ${({ theme }) => theme.colors.gray500};
+  color: ${({ theme }) => theme.colors.textMuted};
   word-break: break-all;
 `
 
 const FinalMessage = styled.p`
   font-size: ${({ theme }) => theme.fontSizes.lg};
-  color: ${({ theme }) => theme.colors.gray500};
+  color: ${({ theme }) => theme.colors.textMuted};
   font-style: italic;
   margin-top: ${({ theme }) => theme.spacing.xl};
 `
@@ -100,4 +101,3 @@ const Contact: React.FC = () => {
 }
 
 export default Contact
-
