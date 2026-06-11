@@ -2,7 +2,7 @@ export const aboutContent = {
   sectionTitle: 'About Me',
   profileImageAlt: '',
   paragraphs: [
-    '프론트엔드 요구사항을 기준으로 API와 상태 흐름을 설계하는 **Frontend-oriented BFF 개발자**입니다.',
+    '프론트엔드 요구사항을 기준으로 API와 상태 흐름을 설계하는 **Frontend 개발자**입니다.',
     '물류·이커머스 도메인의 실운영 시스템에서 BFF 구조, 실시간 데이터 처리, 상태 관리 아키텍처를 주도적으로 설계·구현했습니다. 현장 자동화와 성능 최적화를 통해 **업무 효율·안정성 개선 성과**를 만들어 왔습니다.',
     'React 18, TypeScript, Zustand를 활용한 프론트엔드 개발과 ASP.NET Core 기반 BFF 서버 구축 경험이 있으며, 프론트엔드와 백엔드 간의 효과적인 통합을 통해 개발 생산성과 시스템 안정성을 향상시키는 것에 관심이 많습니다.',
   ],

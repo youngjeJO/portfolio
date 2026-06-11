@@ -50,7 +50,7 @@ export const projectsDetail: Record<string, ProjectDetail> = {
     title: '물류센터 업무 통합 시스템',
     period: '2025.06 ~ 2025.09',
     scale: '중대형 (물류센터 현장 업무 시스템)',
-    team: '㈜굿스플로 SCM팀',
+    team: '프론트앤드 1명, 백앤드 2명',
     role: '프론트엔드 주도 개발',
     description:
       'DHL 인천 물류센터의 출고, 검수, 프린트, 작업 관리 등 현장 업무를 효율적으로 처리하기 위한 웹 기반 통합 물류관리 시스템입니다. 바코드 스캔 기반의 실시간 데이터 처리와 자동화된 워크플로우를 통해 물류 업무의 정확성과 효율성을 향상시켰습니다.',
@@ -192,7 +192,7 @@ export const projectsDetail: Record<string, ProjectDetail> = {
     title: 'Cafe24 운송장 출력 시스템 & Web BFF',
     period: '2024.11 ~ 2025.06',
     scale: '중대형 (이커머스 물류 · 운송장 출력 실운영 시스템)',
-    team: '㈜굿스플로 SCM팀',
+    team: '프론트앤드 1명, 백앤드 1명',
     role: '프론트엔드 / BFF 설계 및 구현',
     description:
       'Cafe24 입점 셀러 및 물류 운영자를 위한 운송장 출력 시스템입니다. 복잡하게 분산된 Cafe24 API 및 내부 시스템을 프론트엔드에서 사용하기 쉬운 형태로 통합하고, 프론트엔드 요구사항을 기준으로 BFF(Backend for Frontend) 구조를 설계하여 운송장 출력, 주문·결제·배송 흐름을 하나의 화면·API 흐름으로 단순화했습니다. 실운영 환경에서 성능·안정성·유지보수성을 개선하는 것이 목표였습니다.',
@@ -315,9 +315,9 @@ export const projectsDetail: Record<string, ProjectDetail> = {
   },
   'GODO-bff': {
     title: 'GODO 이커머스 관리 시스템 & BFF',
-    period: '[기간 입력]',
+    period: '2025.09 ~ 2025.11',
     scale: '중대형 (이커머스 운영·관리 실서비스)',
-    team: '[팀 구성 입력]',
+    team: '프론트앤드 1명, 백앤드 1명',
     role: '프론트엔드 개발 / BFF 설계 및 구현',
     description:
       '쇼핑몰 운영자 및 관리자를 위한 이커머스 관리 시스템입니다. 프론트엔드 요구사항을 기준으로 BFF 구조를 설계하여 이커머스 운영 화면에서 필요한 데이터를 한 번에 제공하고, 프론트엔드 복잡도를 낮추며 API 사용성과 유지보수성을 개선했습니다. 인증·상태·에러 처리 방식을 일관되게 통합하여 운영 안정성을 향상시켰습니다.',
