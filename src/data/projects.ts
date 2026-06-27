@@ -53,7 +53,7 @@ export const projectsDetail: Record<string, ProjectDetail> = {
     team: '프론트앤드 1명, 백앤드 2명',
     role: '프론트엔드 주도 개발',
     description:
-      'DHL 인천 물류센터의 운송장출력, 검수, 작업 관리 등 현장 업무를 효율적으로 처리하기 위한 웹 기반 통합 물류관리 시스템입니다. 바코드 스캔 기반의 실시간 데이터 처리와 자동화된 워크플로우를 통해 물류 업무의 정확성과 효율성을 향상시켰습니다.',
+      '바코드 스캔 → 운송장출력 → 검증 피드백으로 이어지는 현장 검수 흐름을 웹 화면으로 구현했습니다. 중복 스캔 방지를 위해 디바운스와 상태 기반 입력 제어를 적용했고, 성공/실패 상황을 시각·청각 피드백으로 제공해 현장 작업자가 즉시 오류를 인지할 수 있도록 개선했습니다.',
     techStack: [
       {
         category: 'Frontend',
@@ -188,7 +188,7 @@ export const projectsDetail: Record<string, ProjectDetail> = {
     team: '프론트앤드 1명, 백앤드 1명',
     role: '프론트엔드 / BFF 설계 및 구현',
     description:
-      'Cafe24 입점 셀러 및 물류 운영자를 위한 운송장 출력 시스템입니다. 복잡하게 분산된 Cafe24 API 및 내부 시스템을 프론트엔드에서 사용하기 쉬운 형태로 통합하고, 프론트엔드 요구사항을 기준으로 BFF(Backend for Frontend) 구조를 설계하여 주문수집·운송장출력·배송 흐름을 하나의 화면·API 흐름으로 단순화했습니다. 실운영 환경에서 성능·안정성·유지보수성을 개선하는 것이 목표였습니다.',
+      'Cafe24 기반 셀러의 주문수집·운송장출력·배송 상태 관리를 하나의 흐름으로 처리하기 위한 운영 시스템을 개발했습니다.\n분산된 Cafe24 API, 결제 API, 내부 배송 데이터를 프론트엔드 화면 기준으로 재구성하기 위해 ASP.NET Core 기반 BFF를 설계·구현했고, 프론트엔드에서는 React/TypeScript와 Zustand를 활용해 주문, 결제, 배송 상태를 일관되게 관리했습니다.\n병렬 API 호출, 폴링 구조 개선, 불필요한 호출 제거를 통해 초기 로딩 시간을 약 30% 개선하고 API 호출 횟수를 약 60% 줄였습니다.',
     techStack: [
       {
         category: 'Frontend',
@@ -313,7 +313,7 @@ export const projectsDetail: Record<string, ProjectDetail> = {
     team: '프론트앤드 1명, 백앤드 1명',
     role: '프론트엔드 개발 / BFF 설계 및 구현',
     description:
-      '쇼핑몰 운영자 및 관리자를 위한 이커머스 관리 시스템입니다. 프론트엔드 요구사항을 기준으로 BFF 구조를 설계하여 이커머스 운영 화면에서 필요한 데이터를 한 번에 제공하고, 프론트엔드 복잡도를 낮추며 API 사용성과 유지보수성을 개선했습니다. 인증·상태·에러 처리 방식을 일관되게 통합하여 운영 안정성을 향상시켰습니다.',
+      'GODO몰 기반 운영자 관리 시스템에서 주문/배송/운송장 출력 화면을 개발하고, 화면 요구사항에 맞춰 BFF API 응답 구조를 정리했습니다. 인증, 세션 만료, API 실패 응답, 요청/응답 로깅 흐름을 공통화하여 운영 중 이슈 대응과 유지보수성을 개선했습니다.',
     techStack: [
       {
         category: 'Frontend',
@@ -417,53 +417,115 @@ export const projectsDetail: Record<string, ProjectDetail> = {
       blog: '#',
     },
   },
+  'waybill-legacy': {
+    title: '운송장 출력 시스템 레거시 유지보수 및 운영 이슈 대응',
+    period: '2023.06 ~ 현재',
+    scale: '실운영 B2B 운송장 출력 솔루션',
+    role: '레거시 유지보수 / 운영 이슈 대응',
+    description:
+      '운송장 출력 시스템의 AngularJS 기반 레거시 화면을 유지보수하고, 고객사의 운송장 출력 오류 및 문의에 대응한 운영 업무입니다. 화면·API·DB·외부 택배사/플랫폼 연동 흐름을 함께 확인하며 원인을 분석하고, 반복 오류와 예외 상황을 정리해 개선 포인트를 도출하며 실운영 B2B 솔루션의 안정성을 유지했습니다.',
+    techStack: [
+      {
+        category: 'Frontend',
+        items: ['AngularJS'],
+      },
+      {
+        category: '운영·연동',
+        items: ['REST API', 'DB', '외부 택배사/플랫폼 연동'],
+      },
+      {
+        category: '기타',
+        items: ['Git'],
+      },
+    ],
+    tasks: [
+      {
+        title: '레거시 화면 유지보수',
+        items: [
+          'AngularJS 기반 레거시 화면 유지보수',
+        ],
+      },
+      {
+        title: '운영 이슈 대응 및 원인 분석',
+        items: [
+          '고객사 운송장 출력 오류 및 문의 대응',
+          '화면, API, DB, 외부 택배사/플랫폼 연동 흐름을 함께 확인하며 원인 분석',
+          '반복 오류와 예외 상황을 정리해 개선 포인트 도출',
+        ],
+      },
+    ],
+    businessResults: [
+      '실운영 B2B 솔루션의 안정성 유지 경험 확보',
+    ],
+    contribution:
+      'AngularJS 기반 레거시 화면 유지보수, 고객사 운송장 출력 오류 및 문의 대응, 화면·API·DB·외부 연동 흐름 분석을 통한 원인 파악 및 개선 포인트 도출',
+    links: {},
+  },
 }
 
 export const projectsSummary: ProjectSummary[] = [
-  {
-    id: 'dhl-ilms',
-    title: '물류센터 업무 통합 시스템',
-    period: '2025.06 ~ 2025.09',
-    role: '프론트엔드 주도 개발',
-    description:
-      '물류센터의 운송장출력, 검수, 작업 관리 등 현장 업무를 효율적으로 처리하기 위한 웹 기반 통합 물류관리 시스템입니다.',
-    techStack: ['React 18', 'TypeScript', 'Zustand', 'Styled-components', 'Vite', 'Wijmo Grid'],
-    highlights: [
-      '바코드 스캔 기반 운송장출력·검수 시스템 구현',
-      'Zustand 기반 상태 관리 아키텍처 설계',
-      '외부 프린트 서비스 연동',
-    ],
-  },
   {
     id: 'cafe24-bff',
     title: 'Cafe24 운송장 출력 시스템 & Web BFF',
     period: '2024.11 ~ 2025.06',
     role: '프론트엔드 / BFF 설계 및 구현',
     description:
-      'Cafe24 입점 셀러 및 물류 운영자를 위한 운송장 출력 시스템입니다. 프론트엔드 요구사항을 기준으로 BFF 구조를 설계하여 복잡하게 분산된 API를 통합하고, 주문수집·운송장출력·배송 흐름을 하나의 화면·API 흐름으로 단순화했습니다.',
-    techStack: ['React 18', 'Zustand', 'ASP.NET', 'Cafe24 API', '이니시스 API'],
+      'Cafe24 입점 셀러와 물류 운영자를 위한 운송장 출력 시스템입니다. 분산된 Cafe24 API, 결제 API, 내부 배송 데이터를 프론트엔드 화면 기준으로 통합하기 위해 ASP.NET Core 기반 Web BFF를 설계·구현했고, 주문수집·운송장출력·배송 상태 관리 흐름을 하나의 화면과 API 흐름으로 단순화했습니다.',
+    techStack: ['React 18', 'TypeScript', 'Zustand', 'Axios', 'ASP.NET Core', 'Cafe24 API', '이니시스 API'],
     highlights: [
-      '프론트엔드 요구사항 기준 BFF 설계',
-      'API 통합 및 데이터 정규화',
-      '이니시스 결제 직연동',
+      '프론트엔드 화면 요구사항 기준 Web BFF API 설계',
+      '분산된 외부 API 응답 통합 및 UI 기준 데이터 정규화',
+      'Cafe24 OAuth 2.0 인증 및 토큰 갱신 흐름 연동',
+      '이니시스 결제 승인·환불·부분환불 흐름 처리',
       '초기 로딩 속도 약 30% 개선, API 호출 횟수 약 60% 감소',
-      'SPA 전용 BFF API 구축 (ASP.NET Core)',
     ],
   },
   {
-    id: 'GODO-bff',
-    title: 'GODO 이커머스 관리 시스템 & BFF',
-    period: '2025.10 ~ 2025.12',
+    id: 'godo-bff',
+    title: 'GODO 이커머스 관리 시스템 & Web BFF',
+    period: '2025.09 ~ 2025.11',
     role: '프론트엔드 개발 / BFF 설계 및 구현',
     description:
-      '쇼핑몰 운영자 및 관리자를 위한 이커머스 관리 시스템입니다. 프론트엔드 요구사항을 기준으로 BFF 구조를 설계하여 이커머스 운영 화면에서 필요한 데이터를 한 번에 제공하고, 프론트엔드 복잡도를 낮추며 API 사용성과 유지보수성을 개선했습니다.',
-    techStack: ['React', 'TypeScript', 'Zustand', 'ASP.NET', 'GODO몰 API', '이니시스 API'],
+      'GODO몰 기반 이커머스 운영자가 주문, 배송, 운송장 출력 업무를 관리할 수 있는 운영자용 시스템입니다. Cafe24 프로젝트에서 사용한 BFF 기반 데이터 통합 방식을 GODO 플랫폼에 맞게 확장 적용하고, 인증·세션·에러 처리 흐름을 공통화해 운영 시스템의 유지보수성을 개선했습니다.',
+    techStack: ['React', 'TypeScript', 'Zustand', 'Axios', 'ASP.NET Core', 'GODO몰 API', '이니시스 API'],
     highlights: [
-      '프론트엔드 요구사항 기준 BFF 구조 설계 및 구현',
-      '프론트엔드 API 호출 수 감소 및 화면 개발 생산성 향상',
-      '이니시스 결제 직연동',
-      '인증·세션·에러 처리 일원화로 유지보수성 향상',
-      '운영 환경에서 장애 대응 및 분석 용이성 확보',
+      'GODO API 연동 및 화면 기준 데이터 구조 정리',
+      '프론트엔드 요구사항 기준 Web BFF API 설계',
+      '쿠키 기반 인증 및 세션 만료 처리 공통화',
+      'API 실패 응답 및 예외 처리 흐름 일원화',
+      '요청/응답 로깅 기반 운영 이슈 분석 구조 개선',
     ],
   },
+  {
+    id: 'dhl-ilms',
+    title: '물류센터 업무 통합 시스템',
+    period: '2025.06 ~ 2025.09',
+    role: '프론트엔드 주도 개발',
+    description:
+      '물류센터의 운송장 출력, 검수, 작업 상태 관리를 처리하기 위한 웹 기반 업무 시스템입니다. 바코드 스캔 → 운송장출력 → 검수 피드백으로 이어지는 현장 업무 흐름을 React/TypeScript 기반 화면으로 구현하고, Zustand를 활용해 스캔 상태, 검수 결과, 프린트 설정, 사용자 설정을 관리했습니다.',
+    techStack: ['React 18', 'TypeScript', 'Zustand', 'Axios', 'Styled-components', 'Vite', 'Wijmo Grid'],
+    highlights: [
+      '바코드 스캔 기반 운송장 출력·검수 흐름 구현',
+      'ID 스캔 → 운송장출력 → 비교 검증 프로세스 구현',
+      '중복 스캔 방지를 위한 디바운스 및 입력 상태 제어',
+      '외부 프린트 서비스 연동 및 출력 결과 피드백 처리',
+      'Wijmo Grid 기반 작업 데이터 조회, 필터링, Excel 다운로드 기능 구현',
+    ],
+  },
+  {
+    id: 'waybill-legacy',
+    title: '운송장 출력 시스템 레거시 유지보수 및 운영 이슈 대응',
+    period: '2023.06 ~ 현재',
+    role: '레거시 유지보수 / 운영 이슈 대응',
+    description:
+      '실운영 중인 B2B 운송장 출력 시스템의 AngularJS 기반 레거시 화면을 유지보수하고, 고객사 운송장 출력 오류와 외부 플랫폼·택배사 연동 이슈를 분석하며 서비스 안정성을 유지한 업무입니다.',
+    techStack: ['AngularJS', 'JavaScript', 'REST API', 'MSSQL', '외부 택배사/플랫폼 연동'],
+    highlights: [
+      'AngularJS 기반 레거시 화면 유지보수',
+      '운송장 출력 오류 및 고객사 문의 대응',
+      '화면·API·DB·외부 연동 흐름 분석을 통한 운영 이슈 원인 파악',
+      '반복 오류와 예외 상황 정리 및 개선 포인트 도출',
+      '실운영 B2B 솔루션의 장애 대응 및 안정성 유지',
+    ],
+  }
 ]
