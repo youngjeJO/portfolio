@@ -1,0 +1,11 @@
+#!/bin/sh
+# portfolio-commit-policy-v1
+set -eu
+
+previous_hook="$(dirname "$0")/commit-msg.before-portfolio"
+if [ -x "$previous_hook" ]; then
+  "$previous_hook" "$@"
+fi
+
+repository_root=$(git rev-parse --show-toplevel)
+exec node "$repository_root/scripts/git/check-commit-message.mjs" "$@"

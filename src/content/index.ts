@@ -1,0 +1,7 @@
+export { heroContent } from './hero'
+export { aboutContent } from './about'
+export { contactContent } from './contact'
+export { navigationContent } from './navigation'
+export { skillsContent } from './skills'
+export type { SkillItem, SkillCategoryContent } from './skills'
+export { sectionLabels, projectLabels, projectDetailLabels } from './labels'
