@@ -111,6 +111,51 @@ const DescriptionText = styled.p`
   line-height: 1.8;
 `
 
+const VisualsSection = styled.section`
+  margin-bottom: ${({ theme }) => theme.spacing.xl};
+`
+
+const VisualFigure = styled.figure`
+  margin: 0 0 ${({ theme }) => theme.spacing.lg};
+  border: 1px solid ${({ theme }) => theme.colors.border};
+  border-radius: ${({ theme }) => theme.radii.base};
+  overflow: hidden;
+  background: ${({ theme }) => theme.colors.white};
+`
+
+const VisualLink = styled.a`
+  display: block;
+  overflow-x: auto;
+  &:focus-visible { outline: 3px solid ${({ theme }) => theme.colors.accent}; outline-offset: -3px; }
+`
+
+const VisualImage = styled.img`
+  display: block;
+  width: 100%;
+  height: auto;
+  @media (max-width: 640px) { min-width: 680px; }
+`
+
+const VisualCaption = styled.figcaption`
+  padding: ${({ theme }) => theme.spacing.sm} ${({ theme }) => theme.spacing.md};
+  color: ${({ theme }) => theme.colors.textMuted};
+  background: ${({ theme }) => theme.colors.surfaceAlt};
+  font-size: ${({ theme }) => theme.fontSizes.sm};
+  line-height: 1.6;
+`
+
+const ExtraVisual = styled.details`
+  margin-bottom: ${({ theme }) => theme.spacing.lg};
+  > summary {
+    cursor: pointer;
+    color: ${({ theme }) => theme.colors.accentHover};
+    font-weight: 600;
+    padding: ${({ theme }) => theme.spacing.sm} 0;
+  }
+  > summary:focus-visible { outline: 3px solid ${({ theme }) => theme.colors.accent}; }
+  ${VisualFigure} { margin-top: ${({ theme }) => theme.spacing.sm}; }
+`
+
 const TechStackSection = styled.div`
   margin-bottom: ${({ theme }) => theme.spacing.xl};
 `
@@ -336,6 +381,28 @@ const ProjectDetail: React.FC = () => {
               <DescriptionTitle>{projectDetailLabels.description}</DescriptionTitle>
               <DescriptionText>{project.description}</DescriptionText>
             </Description>
+
+            {project.visuals && (
+              <VisualsSection aria-label="업무 흐름도">
+                {project.visuals.map((visual) => {
+                  const url = `${import.meta.env.BASE_URL}${visual.src}`
+                  const figure = (
+                    <VisualFigure>
+                      <VisualLink href={url} target="_blank" rel="noopener noreferrer" aria-label={`${visual.caption} 확대해서 보기 (새 창)`}>
+                        <VisualImage src={url} alt={visual.alt} loading="lazy" />
+                      </VisualLink>
+                      <VisualCaption>{visual.caption} · 이미지를 누르면 크게 볼 수 있습니다.</VisualCaption>
+                    </VisualFigure>
+                  )
+                  return visual.secondary ? (
+                    <ExtraVisual key={visual.src}>
+                      <summary>{visual.caption} 보기</summary>
+                      {figure}
+                    </ExtraVisual>
+                  ) : <React.Fragment key={visual.src}>{figure}</React.Fragment>
+                })}
+              </VisualsSection>
+            )}
 
             <TechStackSection>
               <DescriptionTitle>{projectDetailLabels.techStack}</DescriptionTitle>

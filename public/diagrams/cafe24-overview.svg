@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="872" viewBox="0 0 1200 872" role="img" aria-labelledby="title desc">
+<title id="title">담당 범위와 협업 구조</title><desc id="desc">프론트엔드·BFF 재구축부터 배송 상태 연동 배치와 반품 기능 확장까지</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10Z" fill="context-stroke"/></marker></defs>
+<rect x="0" y="0" width="1200" height="872" rx="0" fill="#fff" stroke="none"/>
+<rect x="40" y="40" width="5" height="68" rx="2" fill="#0094ff" stroke="none"/>
+<text x="64" y="73" font-family="Noto Sans KR, sans-serif" font-size="34" fill="#444950" font-weight="700" text-anchor="start">담당 범위와 협업 구조</text>
+<text x="64" y="112" font-family="Noto Sans KR, sans-serif" font-size="21" fill="#6b7280" font-weight="400" text-anchor="start">프론트엔드·BFF 재구축부터 배송 상태 연동 배치와 반품 기능 확장까지</text>
+<rect x="40" y="155" width="745" height="540" rx="10" fill="#f8fafc" stroke="#dbeafe"/>
+<text x="64" y="196" font-family="Noto Sans KR, sans-serif" font-size="27" fill="#0094ff" font-weight="700" text-anchor="start">담당: 프론트엔드·BFF 전체 구현</text>
+<text x="64" y="229" font-family="Noto Sans KR, sans-serif" font-size="23" fill="#0094ff" font-weight="700" text-anchor="start">배송 상태 연동 배치 개발</text>
+<rect x="64" y="254" width="320" height="218" rx="10" fill="#fff" stroke="#e5e7eb"/>
+<rect x="64" y="254" width="320" height="57" rx="10" fill="#0094ff" stroke="none"/>
+<text x="84" y="291" font-family="Noto Sans KR, sans-serif" font-size="25" fill="#fff" font-weight="700" text-anchor="start">React 프론트</text>
+<text x="84" y="350" font-family="Noto Sans KR, sans-serif" font-size="21" fill="#444950" font-weight="400" text-anchor="start">주문 조회 · 운송장 출력</text>
+<text x="84" y="393" font-family="Noto Sans KR, sans-serif" font-size="21" fill="#444950" font-weight="400" text-anchor="start">배송 추적 · 반품 관리</text>
+<text x="84" y="436" font-family="Noto Sans KR, sans-serif" font-size="21" fill="#444950" font-weight="400" text-anchor="start">이용권 결제 · 환불</text>
+<rect x="440" y="254" width="320" height="218" rx="10" fill="#fff" stroke="#e5e7eb"/>
+<rect x="440" y="254" width="320" height="57" rx="10" fill="#0094ff" stroke="none"/>
+<text x="460" y="291" font-family="Noto Sans KR, sans-serif" font-size="25" fill="#fff" font-weight="700" text-anchor="start">ASP.NET Core BFF</text>
+<text x="460" y="350" font-family="Noto Sans KR, sans-serif" font-size="21" fill="#444950" font-weight="400" text-anchor="start">인증 · 주문 데이터 변환</text>
+<text x="460" y="393" font-family="Noto Sans KR, sans-serif" font-size="21" fill="#444950" font-weight="400" text-anchor="start">운송장 콜백 · 배송 반영</text>
+<text x="460" y="436" font-family="Noto Sans KR, sans-serif" font-size="21" fill="#444950" font-weight="400" text-anchor="start">결제 승인 · 반품 연동</text>
+<path d="M391 365 L434 365" fill="none" stroke="#0094ff" stroke-width="2.5" marker-end="url(#arrow)"/>
+<path d="M434 407 L391 407" fill="none" stroke="#6b7280" stroke-width="2.5" stroke-dasharray="7 5" marker-end="url(#arrow)"/>
+<rect x="64" y="500" width="696" height="137" rx="10" fill="#fff" stroke="#e5e7eb"/>
+<text x="86" y="535" font-family="Noto Sans KR, sans-serif" font-size="25" fill="#0094ff" font-weight="700" text-anchor="start">Node.js 배송 상태 연동 배치</text>
+<text x="86" y="575" font-family="Noto Sans KR, sans-serif" font-size="21" fill="#444950" font-weight="400" text-anchor="start">사내 배송 결과 조회 → 대상 선별 → Cafe24 상태 갱신</text>
+<text x="86" y="609" font-family="Noto Sans KR, sans-serif" font-size="21" fill="#6b7280" font-weight="400" text-anchor="start">주문 채널별 제약 반영 · 배송 중 / 배달 완료 연동</text>
+<text x="64" y="672" font-family="Noto Sans KR, sans-serif" font-size="20" fill="#0094ff" font-weight="400" text-anchor="start">프론트엔드 단독 담당 · 사내 API·DB 개발자 1명과 협업</text>
+<rect x="851" y="155" width="309" height="540" rx="10" fill="#f8fafc" stroke="#e5e7eb"/>
+<text x="875" y="196" font-family="Noto Sans KR, sans-serif" font-size="27" fill="#444950" font-weight="700" text-anchor="start">연동 대상</text>
+<text x="875" y="229" font-family="Noto Sans KR, sans-serif" font-size="19" fill="#6b7280" font-weight="400" text-anchor="start">내부 구현은 담당 범위 밖</text>
+<rect x="869" y="252" width="273" height="77" rx="10" fill="#fff" stroke="#e5e7eb"/>
+<text x="885" y="283" font-family="Noto Sans KR, sans-serif" font-size="22" fill="#444950" font-weight="700" text-anchor="start">Cafe24 API</text>
+<text x="885" y="311" font-family="Noto Sans KR, sans-serif" font-size="18" fill="#6b7280" font-weight="400" text-anchor="start">주문 · 운송장 · 배송 상태</text>
+<rect x="869" y="339" width="273" height="77" rx="10" fill="#fff" stroke="#e5e7eb"/>
+<text x="885" y="370" font-family="Noto Sans KR, sans-serif" font-size="22" fill="#444950" font-weight="700" text-anchor="start">사내 배송 서비스</text>
+<text x="885" y="398" font-family="Noto Sans KR, sans-serif" font-size="18" fill="#6b7280" font-weight="400" text-anchor="start">배송 결과 · 수거 · 이용권</text>
+<rect x="869" y="426" width="273" height="77" rx="10" fill="#fff" stroke="#e5e7eb"/>
+<text x="885" y="457" font-family="Noto Sans KR, sans-serif" font-size="22" fill="#444950" font-weight="700" text-anchor="start">이니시스 결제 API</text>
+<text x="885" y="485" font-family="Noto Sans KR, sans-serif" font-size="18" fill="#6b7280" font-weight="400" text-anchor="start">결제 승인 · 환불</text>
+<rect x="869" y="513" width="273" height="77" rx="10" fill="#fff" stroke="#e5e7eb"/>
+<text x="885" y="544" font-family="Noto Sans KR, sans-serif" font-size="22" fill="#444950" font-weight="700" text-anchor="start">송장 출력 시스템</text>
+<text x="885" y="572" font-family="Noto Sans KR, sans-serif" font-size="18" fill="#6b7280" font-weight="400" text-anchor="start">출력 화면 · 결과 콜백</text>
+<text x="875" y="629" font-family="Noto Sans KR, sans-serif" font-size="19" fill="#444950" font-weight="700" text-anchor="start">협업 백엔드 개발자 담당</text>
+<text x="875" y="660" font-family="Noto Sans KR, sans-serif" font-size="19" fill="#6b7280" font-weight="400" text-anchor="start">사내 배송 서비스 API·DB</text>
+<path d="M790 366 L845 366" fill="none" stroke="#0094ff" stroke-width="2.5" marker-end="url(#arrow)"/>
+<path d="M845 407 L790 407" fill="none" stroke="#6b7280" stroke-width="2.5" stroke-dasharray="7 5" marker-end="url(#arrow)"/>
+<path d="M790 569 L845 569" fill="none" stroke="#0094ff" stroke-width="2.5" marker-end="url(#arrow)"/>
+<rect x="40" y="724" width="1120" height="116" rx="10" fill="#f0f8ff" stroke="none"/>
+<text x="64" y="758" font-family="Noto Sans KR, sans-serif" font-size="21" fill="#0094ff" font-weight="700" text-anchor="start">설계 판단</text>
+<text x="64" y="792" font-family="Noto Sans KR, sans-serif" font-size="22" fill="#444950" font-weight="400" text-anchor="start">화면 요청은 BFF로 연결하고, 배송 결과의 상태 갱신은 별도 배치로 구현했다.</text>
+<text x="64" y="822" font-family="Noto Sans KR, sans-serif" font-size="22" fill="#444950" font-weight="400" text-anchor="start">사내 배송 서비스 API·DB 담당자와 협업해 주문·출력·배송·결제·반품 업무를 연결했다.</text>
+</svg>

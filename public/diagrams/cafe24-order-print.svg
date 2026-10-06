@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="570" viewBox="0 0 1200 570" role="img" aria-labelledby="title desc">
+<title id="title">주문 조회에서 배송정보 등록까지</title><desc id="desc">핵심 흐름 · 주문 전송과 배송 등록은 서로 다른 처리 단계</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10Z" fill="context-stroke"/></marker></defs>
+<rect x="0" y="0" width="1200" height="570" rx="0" fill="#fff" stroke="none"/>
+<rect x="40" y="40" width="5" height="68" rx="2" fill="#0094ff" stroke="none"/>
+<text x="64" y="73" font-family="Noto Sans KR, sans-serif" font-size="34" fill="#444950" font-weight="700" text-anchor="start">주문 조회에서 배송정보 등록까지</text>
+<text x="64" y="112" font-family="Noto Sans KR, sans-serif" font-size="21" fill="#6b7280" font-weight="400" text-anchor="start">핵심 흐름 · 주문 전송과 배송 등록은 서로 다른 처리 단계</text>
+<rect x="40" y="173" width="259" height="220" rx="10" fill="#f8fafc" stroke="#e5e7eb"/>
+<text x="60" y="207" font-family="Noto Sans KR, sans-serif" font-size="18" fill="#0094ff" font-weight="700" text-anchor="start">01  프론트</text>
+<text x="60" y="252" font-family="Noto Sans KR, sans-serif" font-size="25" fill="#444950" font-weight="700" text-anchor="start">주문 조회</text>
+<text x="60" y="295" font-family="Noto Sans KR, sans-serif" font-size="21" fill="#6b7280" font-weight="400" text-anchor="start">조건 검색과</text>
+<text x="60" y="328" font-family="Noto Sans KR, sans-serif" font-size="21" fill="#6b7280" font-weight="400" text-anchor="start">출력할 주문 선택</text>
+<rect x="327" y="173" width="259" height="220" rx="10" fill="#f8fafc" stroke="#e5e7eb"/>
+<text x="347" y="207" font-family="Noto Sans KR, sans-serif" font-size="18" fill="#0094ff" font-weight="700" text-anchor="start">02  BFF</text>
+<text x="347" y="252" font-family="Noto Sans KR, sans-serif" font-size="25" fill="#444950" font-weight="700" text-anchor="start">화면용 변환</text>
+<text x="347" y="295" font-family="Noto Sans KR, sans-serif" font-size="21" fill="#6b7280" font-weight="400" text-anchor="start">Cafe24 주문 응답을</text>
+<text x="347" y="328" font-family="Noto Sans KR, sans-serif" font-size="21" fill="#6b7280" font-weight="400" text-anchor="start">화면용 데이터로 변환</text>
+<path d="M304 282 L321 282" fill="none" stroke="#0094ff" stroke-width="2.5" marker-end="url(#arrow)"/>
+<rect x="614" y="173" width="259" height="220" rx="10" fill="#f8fafc" stroke="#e5e7eb"/>
+<text x="634" y="207" font-family="Noto Sans KR, sans-serif" font-size="18" fill="#0094ff" font-weight="700" text-anchor="start">03  프론트</text>
+<text x="634" y="252" font-family="Noto Sans KR, sans-serif" font-size="25" fill="#444950" font-weight="700" text-anchor="start">출력 요청</text>
+<text x="634" y="295" font-family="Noto Sans KR, sans-serif" font-size="21" fill="#6b7280" font-weight="400" text-anchor="start">주문을 전송하고</text>
+<text x="634" y="328" font-family="Noto Sans KR, sans-serif" font-size="21" fill="#6b7280" font-weight="400" text-anchor="start">외부 출력 화면 실행</text>
+<path d="M591 282 L608 282" fill="none" stroke="#0094ff" stroke-width="2.5" marker-end="url(#arrow)"/>
+<rect x="901" y="173" width="259" height="220" rx="10" fill="#f8fafc" stroke="#e5e7eb"/>
+<text x="921" y="207" font-family="Noto Sans KR, sans-serif" font-size="18" fill="#0094ff" font-weight="700" text-anchor="start">04  BFF</text>
+<text x="921" y="252" font-family="Noto Sans KR, sans-serif" font-size="25" fill="#444950" font-weight="700" text-anchor="start">콜백 · 배송 등록</text>
+<text x="921" y="295" font-family="Noto Sans KR, sans-serif" font-size="21" fill="#6b7280" font-weight="400" text-anchor="start">출력 결과를 받아</text>
+<text x="921" y="328" font-family="Noto Sans KR, sans-serif" font-size="21" fill="#6b7280" font-weight="400" text-anchor="start">Cafe24 배송정보 반영</text>
+<path d="M878 282 L895 282" fill="none" stroke="#0094ff" stroke-width="2.5" marker-end="url(#arrow)"/>
+<rect x="40" y="421" width="1120" height="116" rx="10" fill="#f0f8ff" stroke="none"/>
+<text x="64" y="455" font-family="Noto Sans KR, sans-serif" font-size="21" fill="#0094ff" font-weight="700" text-anchor="start">설계 판단</text>
+<text x="64" y="489" font-family="Noto Sans KR, sans-serif" font-size="22" fill="#444950" font-weight="400" text-anchor="start">외부 주문 응답의 변환은 BFF에서 맡고, 출력 결과는 콜백으로 배송 등록에 연결했다.</text>
+<text x="64" y="519" font-family="Noto Sans KR, sans-serif" font-size="22" fill="#444950" font-weight="400" text-anchor="start">배송 등록 결과의 실패 유형을 구분하여 운영 알림과 오류 응답으로 처리했다.</text>
+</svg>

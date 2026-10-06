@@ -28,6 +28,7 @@ export interface ProjectDetail {
   technicalResults?: string[]
   businessResults?: string[]
   contribution?: string
+  visuals?: { src: string; alt: string; caption: string; secondary?: boolean }[]
   links: {
     demo?: string
     github?: string
@@ -343,6 +344,24 @@ export const projectsDetail: Record<string, ProjectDetail> = {
     ],
     contribution:
       '프론트엔드·BFF 전체 구현과 배송 상태 연동 배치 개발을 담당했습니다. 사내 배송 서비스 API·DB 담당 백엔드 개발자 1명과 협업하며 Cafe24·이니시스·사내 배송 서비스 연동을 구현했습니다.',
+    visuals: [
+      {
+        src: 'diagrams/cafe24-overview.svg',
+        alt: 'React 프론트, ASP.NET Core BFF와 Node.js 배치의 담당 범위 및 외부 시스템 협업 구조',
+        caption: '담당 범위와 협업 구조 · 실제 서비스 화면이 아닌 업무 흐름 재구성',
+      },
+      {
+        src: 'diagrams/cafe24-order-print.svg',
+        alt: '주문 조회, BFF 데이터 변환, 출력 요청, 배송 등록 콜백의 네 단계',
+        caption: '주문 조회부터 운송장 등록까지 · 화면용 변환과 출력 결과 처리를 분리',
+      },
+      {
+        src: 'diagrams/cafe24-delivery-batch.svg',
+        alt: '사내 배송 결과 조회, 네이버페이 주문 상태 변경 제외, Cafe24 배송 상태 갱신',
+        caption: '배송 상태 연동 배치 · 운송장 등록 콜백과 별도의 작업',
+        secondary: true,
+      },
+    ],
     links: {},
   },
   'godo-bff': {
